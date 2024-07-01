@@ -7,7 +7,7 @@ const AboutMe = () => {
   return (
     <div
       id="about"
-      className="flex min-h-[50vh]  flex-col md:flex-row items-center justify-center my-[5vh] px-[5%] "
+      className="flex min-h-[50vh]  flex-col md:flex-row items-start md:items-center justify-center my-[5vh] px-[5%] "
     >
       <h1 className="heading text-left md:text-normal flex w-[260px] items-start justify-start about_h1">
         About Me
