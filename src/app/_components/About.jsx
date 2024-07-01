@@ -9,7 +9,7 @@ const AboutMe = () => {
       id="about"
       className="flex min-h-[50vh]  flex-col md:flex-row items-center justify-center my-[5vh] px-[5%] "
     >
-      <h1 className="heading flex w-[260px] items-start justify-start about_h1">
+      <h1 className="heading text-left md:text-normal flex w-[260px] items-start justify-start about_h1">
         About Me
       </h1>
       <div className="w-full  md:pl-8 flex flex-col justify-start items-start">
