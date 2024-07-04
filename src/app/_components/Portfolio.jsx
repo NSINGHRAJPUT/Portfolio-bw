@@ -62,7 +62,7 @@ export default function Skills() {
   ];
 
   return (
-    <section className="p-8">
+    <section id="projects" className="p-8">
       <h2 className="heading mb-8">Portfolio</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
         {projects.map((project, index) => (

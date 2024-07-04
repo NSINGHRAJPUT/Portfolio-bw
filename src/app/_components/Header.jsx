@@ -18,7 +18,7 @@ export default function Header() {
         <Link href="#home">Home</Link>
         <Link href="#about">About</Link>
         <Link href="#projects">Projects</Link>
-
+        <Link href="#skills">Skills</Link>
         <Link href="#contact">Contact</Link>
       </nav>
 
@@ -39,24 +39,22 @@ export default function Header() {
         </button>
         {isOpen && (
           <div className="absolute flex flex-col top-16 right-4 bg-white shadow-lg p-4 space-y-2">
-            <Link href="/about" onClick={() => setIsOpen(false)}>
+            <Link href="#hero" onClick={() => setIsOpen(false)}>
+              Home
+            </Link>
+            <Link href="#about" onClick={() => setIsOpen(false)}>
               About
             </Link>
-            <Link href="/portfolio" onClick={() => setIsOpen(false)}>
-              Portfolio
+            <Link href="/projects" onClick={() => setIsOpen(false)}>
+              Projects
             </Link>
-            <Link href="/services" onClick={() => setIsOpen(false)}>
-              Services
-            </Link>
-            <Link href="/blog" onClick={() => setIsOpen(false)}>
-              Blog
+            <Link href="/skills" onClick={() => setIsOpen(false)}>
+              Skills
             </Link>
             <Link href="/contact" onClick={() => setIsOpen(false)}>
               Contact
             </Link>
-            <Link href="/faq" onClick={() => setIsOpen(false)}>
-              FAQ
-            </Link>
+
             <Link
               href="mailto:nsinghrajputx@gmail.com"
               className="button-opposite w-fit"

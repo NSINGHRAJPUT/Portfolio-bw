@@ -11,7 +11,7 @@ export default function Skills() {
   ];
 
   return (
-    <section className=" bg-gray-800 text-white p-[5%] pt-6">
+    <section id="skills" className=" bg-gray-800 text-white p-[5%] pt-6">
       <h2 className="heading mb-4 text-center">Skills</h2>
       <p className="paragraph mb-8 text-center">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

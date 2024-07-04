@@ -52,7 +52,10 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="flex flex-col md:flex-row items-start md:items-center justify-between p-8 bg-black text-white min-h-screen">
+    <section
+      id="contact"
+      className="flex flex-col md:flex-row items-start md:items-center justify-between p-8 bg-black text-white min-h-screen"
+    >
       <Toaster />
       {/* Left Section */}
       <div className="md:w-1/2">
