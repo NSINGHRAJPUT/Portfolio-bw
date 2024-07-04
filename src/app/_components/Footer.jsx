@@ -1,6 +1,13 @@
 // components/Footer.js
 
-import { FaLinkedin, FaFacebook, FaTwitter } from "react-icons/fa";
+import Link from "next/link";
+import {
+  FaLinkedin,
+  FaFacebook,
+  FaTwitter,
+  FaGithub,
+  FaLinkedinIn,
+} from "react-icons/fa";
 import { MdEmail, MdPhone } from "react-icons/md";
 
 export default function Footer() {
@@ -11,33 +18,30 @@ export default function Footer() {
         <h2 className="text-lg font-bold">GET IN TOUCH</h2>
         <div className="flex items-center">
           <MdEmail className="mr-2" />
-          <a href="mailto:kr12@hotmail.com">kr12@hotmail.com</a>
+          <Link href="mailto:nsinghrajputx@gmail.com" className=" w-fit">
+            nsinghrajputx@gmail.com
+          </Link>
         </div>
         <div className="flex items-center">
           <MdPhone className="mr-2" />
-          <a href="tel:717-555-1234">717-555-1234</a>
+          <a href="tel:9752661779">9752661779</a>
         </div>
       </div>
 
-      {/* Contact Button */}
-      <button className="button w-32 mt-4 md:mt-0">CONTACT ME</button>
-
       {/* Social Media Links */}
       <div className="flex space-x-4 mt-4 md:mt-0">
-        <a href="#" className="text-xl">
-          <FaLinkedin />
-        </a>
-        <a href="#" className="text-xl">
-          <FaFacebook />
-        </a>
-        <a href="#" className="text-xl">
-          <FaTwitter />
-        </a>
+        <Link href="https://github.com/NSINGHRAJPUT?tab=repositories">
+          <FaGithub className="text-black text-2xl md:text-3xl mr-2" />
+        </Link>
+
+        <Link href="https://www.linkedin.com/in/n-s-r/">
+          <FaLinkedinIn className="text-black text-2xl md:text-3xl mr-2" />
+        </Link>
       </div>
 
       {/* Copyright */}
       <div className="mt-4 md:mt-0">
-        <p>Copyright © 2019 KR</p>
+        <p>Copyright © 2024 NSR</p>
       </div>
     </footer>
   );

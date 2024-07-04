@@ -1,4 +1,5 @@
 import AboutMe from "./_components/About";
+import ContactForm from "./_components/Contact";
 import Footer from "./_components/Footer";
 import Header from "./_components/Header";
 import Hero from "./_components/Hero";
@@ -13,6 +14,7 @@ export default function Home() {
       <AboutMe />
       <Skills />
       <Portfolio />
+      <ContactForm />
       <Footer />
     </>
   );

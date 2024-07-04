@@ -1,13 +1,13 @@
 export default function Skills() {
   const skills = [
-    { name: "HTML", level: "80%" },
-    { name: "CSS", level: "75%" },
-    { name: "JavaScript", level: "85%" },
-    { name: "React", level: "70%" },
-    { name: "Photoshop", level: "65%" },
-    { name: "Adobe XD", level: "60%" },
-    { name: "Node.js", level: "75%" },
-    { name: "WordPress", level: "90%" },
+    { name: "REACT", level: "95%" },
+    { name: "REACT NATIVE", level: "90%" },
+    { name: "NODE JS", level: "95%" },
+    { name: "MONGO DB", level: "95%" },
+    { name: "EXPRESS JS", level: "90%" },
+    { name: "NEXT JS", level: "85%" },
+    { name: "SQL", level: "95%" },
+    { name: "MYSQL", level: "90%" },
   ];
 
   return (
@@ -23,7 +23,7 @@ export default function Skills() {
           <h3 className="subheading">MY FOCUS</h3>
           <div className="border-b-2 border-white w-1/3 mb-4"></div>
           <ul className="space-y-8">
-            <li>UI/UX Design</li>
+            <li>Backend Architecture</li>
             <li>Responsive Design</li>
             <li>Web Design</li>
             <li>Mobile App Design</li>

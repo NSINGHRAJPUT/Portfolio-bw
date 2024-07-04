@@ -10,7 +10,7 @@ export default function Header() {
     <header className="flex shadow-md items-center justify-between p-4">
       {/* Logo */}
       <div className="heading">
-        <Link href="/">C M</Link>
+        <Link href="/">N S R</Link>
       </div>
 
       {/* Navigation Links */}
@@ -24,9 +24,13 @@ export default function Header() {
 
       {/* Hire Button */}
       <div className="hidden md:flex justify-center mt-4">
-        <FaGithub className="text-black text-2xl md:text-3xl mr-2" />
-        <FaTwitter className="text-black text-2xl md:text-3xl mr-2" />
-        <FaLinkedin className="text-black text-2xl md:text-3xl mr-2" />
+        <Link href="https://github.com/NSINGHRAJPUT?tab=repositories">
+          <FaGithub className="text-black text-2xl md:text-3xl mr-2" />
+        </Link>
+
+        <Link href="https://www.linkedin.com/in/n-s-r/">
+          <FaLinkedin className="text-black text-2xl md:text-3xl mr-2" />
+        </Link>
       </div>
       {/* Hamburger Menu */}
       <div className="md:hidden">
@@ -53,7 +57,12 @@ export default function Header() {
             <Link href="/faq" onClick={() => setIsOpen(false)}>
               FAQ
             </Link>
-            <button className="button">Hire Me</button>
+            <Link
+              href="mailto:nsinghrajputx@gmail.com"
+              className="button-opposite w-fit"
+            >
+              HIRE ME
+            </Link>
           </div>
         )}
       </div>
