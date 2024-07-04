@@ -31,11 +31,11 @@ export default function Footer() {
       {/* Social Media Links */}
       <div className="flex space-x-4 mt-4 md:mt-0">
         <Link href="https://github.com/NSINGHRAJPUT?tab=repositories">
-          <FaGithub className="text-black text-2xl md:text-3xl mr-2" />
+          <FaGithub className="text-white text-2xl md:text-3xl mr-2" />
         </Link>
 
         <Link href="https://www.linkedin.com/in/n-s-r/">
-          <FaLinkedinIn className="text-black text-2xl md:text-3xl mr-2" />
+          <FaLinkedinIn className="text-white text-2xl md:text-3xl mr-2" />
         </Link>
       </div>
 
