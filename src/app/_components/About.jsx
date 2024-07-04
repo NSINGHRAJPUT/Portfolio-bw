@@ -1,7 +1,7 @@
 import React from "react";
 import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
-import Image from "next/image";
 import Link from "next/link";
+import resume from "../../assets/resume.pdf";
 
 const AboutMe = () => {
   return (
@@ -38,7 +38,9 @@ const AboutMe = () => {
           next project, I am here to help.
         </p>
         <div className="flex flex-row gap-4 items-center justify-center mt-4">
-          <button className="button">Download CV</button>
+          <Link href={resume} className="button">
+            Download CV
+          </Link>
           <Link
             href="mailto:nsinghrajputx@gmail.com"
             className="button-opposite w-fit"
