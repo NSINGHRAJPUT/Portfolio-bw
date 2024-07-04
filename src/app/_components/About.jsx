@@ -38,7 +38,7 @@ const AboutMe = () => {
           next project, I am here to help.
         </p>
         <div className="flex flex-row gap-4 items-center justify-center mt-4">
-          <Link href={resume} className="button">
+          <Link href={resume} target="_blank" className="button">
             Download CV
           </Link>
           <Link
