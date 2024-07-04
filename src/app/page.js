@@ -15,6 +15,8 @@ export default function Home() {
       <Skills />
       <Portfolio />
       <ContactForm />
+      <hr className="border-white border-1" />
+
       <Footer />
     </>
   );
