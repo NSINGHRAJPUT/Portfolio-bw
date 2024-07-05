@@ -19,7 +19,7 @@ export async function POST(req) {
       from: process.env.EMAIL_USERNAME,
       to: email,
       subject: "Thank you for contacting us!",
-      text: `Hi ${name},\n\nThank you for reaching out to us regarding ${service}. We have received your message and will get back to you shortly.\n\nBest regards,\nYour Company Name`,
+      text: `Hi ${name},\n\nThank you for reaching out to us regarding ${service}. We have received your message and will get back to you shortly.\n\nBest regards,\nNeeraj Singh Rajput`,
     };
 
     // Email content for yourself
