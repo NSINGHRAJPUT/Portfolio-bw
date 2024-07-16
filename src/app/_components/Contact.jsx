@@ -45,7 +45,7 @@ const ContactForm = () => {
         method: "POST",
         body: formDataToSend,
       });
-      console.log(response);
+      console.log(response.json());
       if (response.ok) {
         toast.success("Form submitted successfully");
         // Clear the form
@@ -60,7 +60,7 @@ const ContactForm = () => {
         toast.error("Form submission error");
       }
     } catch (error) {
-      console.error("An error occurred while submitting the form", error);
+      console.log("An error occurred while submitting the form", error);
       toast.error("An error occurred while submitting the form");
     } finally {
       setLoading(false);
