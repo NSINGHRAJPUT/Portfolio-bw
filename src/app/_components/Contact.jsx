@@ -10,12 +10,21 @@ const ContactForm = () => {
     email: "",
     service: "",
     message: "",
+    resume: null,
   });
 
   const handleChange = (e) => {
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [name]: value,
+    });
+  };
+
+  const handleFileChange = (e) => {
+    setFormData({
+      ...formData,
+      resume: e.target.files[0],
     });
   };
 
@@ -23,12 +32,18 @@ const ContactForm = () => {
     e.preventDefault();
     try {
       setLoading(true);
+      const formDataToSend = new FormData();
+      formDataToSend.append("name", formData.name);
+      formDataToSend.append("email", formData.email);
+      formDataToSend.append("service", formData.service);
+      formDataToSend.append("message", formData.message);
+      if (formData.resume) {
+        formDataToSend.append("resume", formData.resume);
+      }
+
       const response = await fetch("/api/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+        body: formDataToSend,
       });
 
       if (response.ok) {
@@ -39,6 +54,7 @@ const ContactForm = () => {
           email: "",
           service: "",
           message: "",
+          resume: null,
         });
       } else {
         toast.error("Form submission error");
@@ -63,11 +79,6 @@ const ContactForm = () => {
         <p className="text-5xl font-bold mb-4">
           Do You Have A Project In Your Mind?
         </p>
-        {/* <p className="mb-8">
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form.
-        </p> */}
-
         <h3 className="text-xl font-semibold mb-4">Services Offered</h3>
         <div className="grid grid-cols-2 gap-2 mb-8">
           <span>Front End Development</span>
@@ -76,14 +87,6 @@ const ContactForm = () => {
           <span>App Development</span>
           <span>Graphic Design</span>
         </div>
-
-        {/* <h3 className="text-xl font-semibold mb-4">Follow On</h3>
-        <div className="flex space-x-4">
-          <FaFacebook className="text-2xl" />
-          <FaInstagram className="text-2xl" />
-          <FaWhatsapp className="text-2xl" />
-          <FaLinkedin className="text-2xl" />
-        </div> */}
       </div>
 
       {/* Right Section */}
@@ -125,6 +128,12 @@ const ContactForm = () => {
             placeholder="Write Message"
             className="w-full p-4 bg-gray-800 text-white focus:outline-none h-32"
           ></textarea>
+          <input
+            type="file"
+            name="resume"
+            onChange={handleFileChange}
+            className="w-full p-4 bg-gray-800 text-white focus:outline-none"
+          />
           <button
             type="submit"
             className="w-full p-4 bg-white text-black font-bold"

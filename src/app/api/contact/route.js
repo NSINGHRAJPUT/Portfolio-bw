@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import fs from "fs/promises";
+import path from "path";
 
+// Set up nodemailer transporter
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
@@ -9,11 +12,55 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-export async function POST(req) {
+// Ensure the `tmp` directory exists
+const tmpDir = path.join(process.cwd(), "tmp");
+
+async function ensureTmpDirectoryExists() {
   try {
-    const data = await req.json();
-    const { name, email, service, message } = data;
-    console.log(data);
+    await fs.access(tmpDir); // Check if tmpDir exists
+  } catch (error) {
+    if (error.code === "ENOENT") {
+      await fs.mkdir(tmpDir); // Create tmpDir if it doesn't exist
+    } else {
+      throw error; // Propagate other errors
+    }
+  }
+}
+
+export const config = {
+  api: {
+    bodyParser: false,
+  },
+};
+
+export async function POST(req, res) {
+  try {
+    await ensureTmpDirectoryExists(); // Ensure tmp directory exists
+
+    const formData = await req.formData();
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const service = formData.get("service");
+    const message = formData.get("message");
+    const resumeFile = formData.get("resume");
+    console.log(formData);
+    console.log(name, email, service, message, resumeFile);
+
+    if (!resumeFile) {
+      console.log("Resume file is required");
+      return NextResponse.json(
+        { message: "Resume file is required" },
+        { status: 400 }
+      );
+    }
+
+    const tempFilePath = path.join(tmpDir, resumeFile.name);
+    console.log(`${tempFilePath}`);
+
+    // Convert the file to a buffer and write to the file system
+    const buffer = Buffer.from(await resumeFile.arrayBuffer());
+    await fs.writeFile(tempFilePath, buffer);
+
     // Email content for the user
     const userMailOptions = {
       from: process.env.EMAIL_USERNAME,
@@ -28,11 +75,21 @@ export async function POST(req) {
       to: process.env.EMAIL_USERNAME,
       subject: "New contact form submission",
       text: `You have received a new message from your contact form:\n\nName: ${name}\nEmail: ${email}\nService: ${service}\nMessage: ${message}\n\nPlease respond promptly.`,
+      attachments: [
+        {
+          filename: resumeFile.name,
+          path: tempFilePath,
+          contentType: resumeFile.type,
+        },
+      ],
     };
 
     // Send emails
     await transporter.sendMail(userMailOptions);
     await transporter.sendMail(adminMailOptions);
+
+    // Clean up the temporary file
+    await fs.unlink(tempFilePath);
 
     return NextResponse.json({
       success: true,
