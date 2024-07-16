@@ -27,39 +27,34 @@ async function ensureTmpDirectoryExists() {
   }
 }
 
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
+// This function will handle file uploads
+async function handleFileUpload(req) {
+  const formData = await req.formData();
+  const name = formData.get("name");
+  const email = formData.get("email");
+  const service = formData.get("service");
+  const message = formData.get("message");
+  const resumeFile = formData.get("resume");
 
-export async function POST(req, res) {
+  if (!resumeFile) {
+    throw new Error("Resume file is required");
+  }
+
+  const tempFilePath = path.join(tmpDir, resumeFile.name);
+
+  // Convert the file to a buffer and write to the file system
+  const buffer = Buffer.from(await resumeFile.arrayBuffer());
+  await fs.writeFile(tempFilePath, buffer);
+
+  return { name, email, service, message, resumeFile, tempFilePath };
+}
+
+export async function POST(req) {
   try {
     await ensureTmpDirectoryExists(); // Ensure tmp directory exists
 
-    const formData = await req.formData();
-    const name = formData.get("name");
-    const email = formData.get("email");
-    const service = formData.get("service");
-    const message = formData.get("message");
-    const resumeFile = formData.get("resume");
-    console.log(formData);
-    console.log(name, email, service, message, resumeFile);
-
-    if (!resumeFile) {
-      console.log("Resume file is required");
-      return NextResponse.json(
-        { message: "Resume file is required" },
-        { status: 400 }
-      );
-    }
-
-    const tempFilePath = path.join(tmpDir, resumeFile.name);
-    console.log(`${tempFilePath}`);
-
-    // Convert the file to a buffer and write to the file system
-    const buffer = Buffer.from(await resumeFile.arrayBuffer());
-    await fs.writeFile(tempFilePath, buffer);
+    const { name, email, service, message, resumeFile, tempFilePath } =
+      await handleFileUpload(req);
 
     // Email content for the user
     const userMailOptions = {
