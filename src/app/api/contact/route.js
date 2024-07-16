@@ -22,7 +22,7 @@ async function ensureTmpDirectoryExists() {
     if (error.code === "ENOENT") {
       await fs.mkdir(tmpDir); // Create tmpDir if it doesn't exist
     } else {
-      throw error; // Propagate other errors
+      throw new Error("propogation error");
     }
   }
 }
