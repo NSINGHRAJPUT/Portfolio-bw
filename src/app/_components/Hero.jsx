@@ -28,9 +28,13 @@ export default function Hero() {
       </div>
 
       {/* Right Section */}
-      <div className="md:w-2/5 flex justify-end items-center">
-        <div className="w-fit p-4 ">
-          <Image src={hero} alt="hero" className="w-[540px] h-[340px] mb-12" />
+      <div className="md:w-2/5 flex justify-end items-end">
+        <div className="w-fit p-4 overflow-hidden">
+          <Image
+            src={hero}
+            alt="hero"
+            className="min-w-[540px] md:min-w-[440px] h-[340px] mb-12"
+          />
         </div>
       </div>
     </section>
