@@ -46,8 +46,8 @@ const ContactForm = () => {
         body: formDataToSend,
       });
       const res = await response.json();
-      console.log(res);
-      if (res.ok) {
+      console.log(res.success);
+      if (res.success) {
         toast.success("Form submitted successfully");
         // Clear the form
         setFormData({

@@ -1,7 +1,5 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
-import fs from "fs/promises";
-import path from "path";
 
 // Set up nodemailer transporter
 const transporter = nodemailer.createTransport({
@@ -11,21 +9,6 @@ const transporter = nodemailer.createTransport({
     pass: process.env.EMAIL_PASSWORD, // Your Gmail password or App password
   },
 });
-
-// Ensure the `tmp` directory exists
-const tmpDir = path.join(process.cwd(), "tmp");
-
-async function ensureTmpDirectoryExists() {
-  try {
-    await fs.access(tmpDir); // Check if tmpDir exists
-  } catch (error) {
-    if (error.code === "ENOENT") {
-      await fs.mkdir(tmpDir); // Create tmpDir if it doesn't exist
-    } else {
-      throw new Error("propogation error");
-    }
-  }
-}
 
 // This function will handle file uploads
 async function handleFileUpload(req) {
@@ -40,20 +23,15 @@ async function handleFileUpload(req) {
     throw new Error("Resume file is required");
   }
 
-  const tempFilePath = path.join(tmpDir, resumeFile.name);
-  console.log(tempFilePath);
-  // Convert the file to a buffer and write to the file system
+  // Convert the file to a buffer
   const buffer = Buffer.from(await resumeFile.arrayBuffer());
-  await fs.writeFile(tempFilePath, buffer);
 
-  return { name, email, service, message, resumeFile, tempFilePath };
+  return { name, email, service, message, resumeFile, buffer };
 }
 
 export const POST = async (req) => {
   try {
-    await ensureTmpDirectoryExists(); // Ensure tmp directory exists
-
-    const { name, email, service, message, resumeFile, tempFilePath } =
+    const { name, email, service, message, resumeFile, buffer } =
       await handleFileUpload(req);
 
     // Email content for the user
@@ -73,7 +51,7 @@ export const POST = async (req) => {
       attachments: [
         {
           filename: resumeFile.name,
-          path: tempFilePath,
+          content: buffer,
           contentType: resumeFile.type,
         },
       ],
@@ -82,9 +60,6 @@ export const POST = async (req) => {
     // Send emails
     await transporter.sendMail(userMailOptions);
     await transporter.sendMail(adminMailOptions);
-
-    // Clean up the temporary file
-    await fs.unlink(tempFilePath);
 
     return NextResponse.json({
       success: true,
@@ -98,7 +73,7 @@ export const POST = async (req) => {
       {
         success: false,
         message: "Failed to submit form",
-        error: error,
+        error: error.message,
         stack: error.stack,
       },
       { status: 500 }
