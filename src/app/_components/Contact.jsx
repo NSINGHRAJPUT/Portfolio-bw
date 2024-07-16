@@ -45,7 +45,7 @@ const ContactForm = () => {
         method: "POST",
         body: formDataToSend,
       });
-
+      console.log(response);
       if (response.ok) {
         toast.success("Form submitted successfully");
         // Clear the form

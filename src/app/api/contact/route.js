@@ -41,7 +41,7 @@ async function handleFileUpload(req) {
   }
 
   const tempFilePath = path.join(tmpDir, resumeFile.name);
-
+  console.log(tempFilePath);
   // Convert the file to a buffer and write to the file system
   const buffer = Buffer.from(await resumeFile.arrayBuffer());
   await fs.writeFile(tempFilePath, buffer);
@@ -49,7 +49,7 @@ async function handleFileUpload(req) {
   return { name, email, service, message, resumeFile, tempFilePath };
 }
 
-export async function POST(req) {
+export const POST = async (req) => {
   try {
     await ensureTmpDirectoryExists(); // Ensure tmp directory exists
 
@@ -92,9 +92,16 @@ export async function POST(req) {
     });
   } catch (error) {
     console.error("Error processing form submission:", error);
+
+    // Send the error details to the frontend
     return NextResponse.json(
-      { success: false, message: "Failed to submit form" },
+      {
+        success: false,
+        message: "Failed to submit form",
+        error: error,
+        stack: error.stack,
+      },
       { status: 500 }
     );
   }
-}
+};
