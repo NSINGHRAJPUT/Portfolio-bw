@@ -10,13 +10,22 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Hero />
-      <AboutMe />
-      <Skills />
-      <Portfolio />
-      <ContactForm />
+      <main>
+        <Hero />
+        <section id="about-me">
+          <AboutMe />
+        </section>
+        <section id="skills">
+          <Skills />
+        </section>
+        <section id="portfolio">
+          <Portfolio />
+        </section>
+        <section id="contact">
+          <ContactForm />
+        </section>
+      </main>
       <hr className="border-white border-1" />
-
       <Footer />
     </>
   );

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,39 +22,48 @@ export default function Header() {
         <Link href="#contact">Contact</Link>
       </nav>
 
-      {/* Hire Button */}
+      {/* Social Media Icons */}
       <div className="hidden md:flex justify-center mt-4">
         <Link href="https://github.com/NSINGHRAJPUT?tab=repositories">
-          <FaGithub className="text-black text-2xl md:text-3xl mr-2" />
+          <FaGithub
+            className="text-black text-2xl md:text-3xl mr-2"
+            aria-label="GitHub Profile"
+          />
         </Link>
-
         <Link href="https://www.linkedin.com/in/n-s-r/">
-          <FaLinkedin className="text-black text-2xl md:text-3xl mr-2" />
+          <FaLinkedin
+            className="text-black text-2xl md:text-3xl mr-2"
+            aria-label="LinkedIn Profile"
+          />
         </Link>
       </div>
+
       {/* Hamburger Menu */}
       <div className="md:hidden">
-        <button onClick={() => setIsOpen(!isOpen)} className="text-black">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="text-black"
+          aria-label="Toggle navigation menu"
+        >
           ☰
         </button>
         {isOpen && (
           <div className="absolute flex flex-col top-16 right-4 bg-white shadow-lg p-4 space-y-2">
-            <Link href="#hero" onClick={() => setIsOpen(false)}>
+            <Link href="#home" onClick={() => setIsOpen(false)}>
               Home
             </Link>
             <Link href="#about" onClick={() => setIsOpen(false)}>
               About
             </Link>
-            <Link href="/projects" onClick={() => setIsOpen(false)}>
+            <Link href="#projects" onClick={() => setIsOpen(false)}>
               Projects
             </Link>
-            <Link href="/skills" onClick={() => setIsOpen(false)}>
+            <Link href="#skills" onClick={() => setIsOpen(false)}>
               Skills
             </Link>
-            <Link href="/contact" onClick={() => setIsOpen(false)}>
+            <Link href="#contact" onClick={() => setIsOpen(false)}>
               Contact
             </Link>
-
             <Link
               href="mailto:nsinghrajputx@gmail.com"
               className="button-opposite w-fit"

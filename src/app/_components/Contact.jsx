@@ -46,7 +46,7 @@ const ContactForm = () => {
         body: formDataToSend,
       });
       const res = await response.json();
-      console.log(res.success);
+      // console.log(res.success);
       if (res.success) {
         toast.success("Form submitted successfully");
         // Clear the form
@@ -100,6 +100,7 @@ const ContactForm = () => {
             onChange={handleChange}
             placeholder="Name"
             className="w-full p-4 bg-gray-800 text-white focus:outline-none"
+            required
           />
           <input
             type="email"
@@ -108,14 +109,18 @@ const ContactForm = () => {
             onChange={handleChange}
             placeholder="Email Address"
             className="w-full p-4 bg-gray-800 text-white focus:outline-none"
+            required
           />
           <select
             name="service"
             value={formData.service}
             onChange={handleChange}
             className="w-full p-4 bg-gray-800 text-white focus:outline-none"
+            required
           >
-            <option>Choose Service</option>
+            <option disabled value="">
+              Choose Service
+            </option>
             <option>Front End Development</option>
             <option>Back End Development</option>
             <option>Full Stack Development</option>
@@ -128,6 +133,7 @@ const ContactForm = () => {
             onChange={handleChange}
             placeholder="Write Message"
             className="w-full p-4 bg-gray-800 text-white focus:outline-none h-32"
+            required
           ></textarea>
           <input
             type="file"

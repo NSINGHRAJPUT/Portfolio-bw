@@ -32,7 +32,7 @@ export default function Hero() {
         <div className="w-fit p-4 overflow-hidden">
           <Image
             src={hero}
-            alt="hero"
+            alt="Neeraj Singh Rajput hero image"
             className="min-w-[540px] md:min-w-[440px] h-[340px] mb-12"
           />
         </div>

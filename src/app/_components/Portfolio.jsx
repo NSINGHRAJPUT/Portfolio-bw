@@ -9,7 +9,7 @@ import s6 from "../../assets/images/6.png";
 import s7 from "../../assets/images/7.png";
 import s8 from "../../assets/images/8.png";
 
-export default function Skills() {
+const Portfolio = () => {
   const projects = [
     {
       name: "Condominium Portal",
@@ -37,7 +37,7 @@ export default function Skills() {
     },
     {
       name: "Job Fair",
-      link: " https://job-fair.vercel.app/",
+      link: "https://job-fair.vercel.app/",
       image: s5,
       description: "A platform to find and post job fair events.",
     },
@@ -63,17 +63,11 @@ export default function Skills() {
 
   return (
     <section id="projects" className="p-8">
-      <h2 className="heading mb-8">Portfolio</h2>
+      <h2 className="heading mb-8 text-center">Portfolio</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
         {projects.map((project, index) => (
-          <Link
-            key={index}
-            href={project.link}
-            passHref
-            target="_blank"
-            className="relative h-48 shadow-md hover:shadow-lg transition-shadow duration-300 flex items-center justify-center text-center"
-          >
-            <div className="absolute inset-0 w-full h-full rounded-lg overflow-hidden">
+          <Link key={index} href={project.link}>
+            <div className="relative h-48 shadow-md hover:shadow-lg transition-shadow duration-300 flex items-center justify-center text-center rounded-lg overflow-hidden cursor-pointer">
               <Image
                 src={project.image}
                 alt={project.name}
@@ -93,4 +87,6 @@ export default function Skills() {
       </div>
     </section>
   );
-}
+};
+
+export default Portfolio;

@@ -1,4 +1,6 @@
-export default function Skills() {
+import React from "react";
+
+const Skills = () => {
   const skills = [
     { name: "REACT", level: "95%" },
     { name: "REACT NATIVE", level: "90%" },
@@ -11,11 +13,15 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className=" bg-gray-800 text-white p-[5%] pt-6">
+    <section id="skills" className="bg-gray-800 text-white p-[5%] pt-6">
       <h2 className="heading mb-4 text-center">Skills</h2>
       <p className="paragraph mb-8 text-center">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
+        As a dedicated Full Stack Web Developer, I bring extensive expertise in
+        building dynamic and responsive web applications. My skills encompass a
+        wide range of technologies including React, React Native, Node.js,
+        Express.js, Next.js, MongoDB, SQL, and MySQL. I am committed to
+        delivering efficient, scalable, and user-friendly solutions that meet
+        your business needs.
       </p>
       <div className="flex flex-col md:flex-row justify-between">
         {/* Focus Areas */}
@@ -41,6 +47,7 @@ export default function Skills() {
                 <div
                   className="bg-gray-300 h-4"
                   style={{ width: skill.level }}
+                  aria-label={`${skill.name} proficiency: ${skill.level}`}
                 ></div>
               </div>
             </div>
@@ -49,4 +56,6 @@ export default function Skills() {
       </div>
     </section>
   );
-}
+};
+
+export default Skills;
