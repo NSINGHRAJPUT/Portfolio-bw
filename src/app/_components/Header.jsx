@@ -24,13 +24,16 @@ export default function Header() {
 
       {/* Social Media Icons */}
       <div className="hidden md:flex justify-center mt-4">
-        <Link href="https://github.com/NSINGHRAJPUT?tab=repositories">
+        <Link
+          href="https://github.com/NSINGHRAJPUT?tab=repositories"
+          target="_blank"
+        >
           <FaGithub
             className="text-black text-2xl md:text-3xl mr-2"
             aria-label="GitHub Profile"
           />
         </Link>
-        <Link href="https://www.linkedin.com/in/n-s-r/">
+        <Link href="https://www.linkedin.com/in/n-s-r/" target="_blank">
           <FaLinkedin
             className="text-black text-2xl md:text-3xl mr-2"
             aria-label="LinkedIn Profile"
@@ -67,6 +70,7 @@ export default function Header() {
             <Link
               href="mailto:nsinghrajputx@gmail.com"
               className="button-opposite w-fit"
+              target="_blank"
             >
               HIRE ME
             </Link>

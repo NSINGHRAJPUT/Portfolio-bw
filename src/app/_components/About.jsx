@@ -38,7 +38,11 @@ const AboutMe = () => {
           next project, I am here to help.
         </p>
         <div className="flex flex-row gap-4 items-center justify-center mt-4">
-          <Link href={resume} target="_blank" className="button">
+          <Link
+            href="https://drive.google.com/file/d/10LyXsrf9TKvZRH-KGE5-4w4JHXIG9LAk"
+            target="_blank"
+            className="button"
+          >
             Download CV
           </Link>
           <Link
