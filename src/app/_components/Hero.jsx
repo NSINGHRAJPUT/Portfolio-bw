@@ -20,6 +20,7 @@ export default function Hero() {
           life!
         </p>
         <Link
+          target="_blank"
           href="mailto:nsinghrajputx@gmail.com"
           className="button-opposite w-fit"
         >
