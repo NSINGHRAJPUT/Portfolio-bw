@@ -1,9 +1,11 @@
 import AboutMe from "./_components/About";
 import ContactForm from "./_components/Contact";
+import Education from "./_components/Education";
 import Footer from "./_components/Footer";
 import Header from "./_components/Header";
 import Hero from "./_components/Hero";
 import Portfolio from "./_components/Portfolio";
+import Services from "./_components/Services";
 import Skills from "./_components/Skills";
 
 export default function Home() {
@@ -21,6 +23,13 @@ export default function Home() {
         <section id="portfolio">
           <Portfolio />
         </section>
+        <section id="education">
+          <Education />
+        </section>
+        <section id="services">
+          <Services />
+        </section>
+
         <section id="contact">
           <ContactForm />
         </section>
