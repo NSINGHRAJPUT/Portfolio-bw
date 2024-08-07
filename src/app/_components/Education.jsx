@@ -23,6 +23,13 @@ const educationDetails = [
     university: "Jiwaji University",
   },
   {
+    degree: "Class XII",
+    year: "(2014-2015)",
+    major: "Computer Science",
+    institution: "Gyan Ganga International Academy, Ratanpur, Bhopal (M.P.)",
+    board: "CBSE",
+  },
+  {
     degree: "Class X",
     year: "(2012-2013)",
     major: "Computer Science",
