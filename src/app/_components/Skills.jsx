@@ -70,7 +70,7 @@ export default function Skills() {
             return (
               <div
                 key={index}
-                className="p-6 w-[240px] bg-gray-900 shadow-lg rounded-lg text-center hover:shadow-xl transition-shadow duration-300"
+                className="p-6 w-[360px] bg-gray-900 shadow-lg rounded-lg text-center hover:shadow-xl transition-shadow duration-300"
               >
                 <IconComponent
                   size={64}
