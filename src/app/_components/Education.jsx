@@ -4,18 +4,16 @@ import React from "react";
 
 const educationDetails = [
   {
-    degree: "Class X",
-    year: "(2012-2013)",
-    major: "Computer Science",
-    institution: "Gyan Ganga International Academy, Ratanpur, Bhopal (M.P.)",
-    board: "CBSE",
+    degree: "MCA",
+    year: "(2023-Present)",
+    institution: "GLA University, Mathura (U.P.)",
+    university: "GLA University",
   },
   {
-    degree: "Class XII",
-    year: "(2014-2015)",
-    major: "Computer Science",
-    institution: "Gyan Ganga International Academy, Ratanpur, Bhopal (M.P.)",
-    board: "CBSE",
+    degree: "B.Ed",
+    year: "(2019-2021)",
+    institution: "SSBBSMP, Morena (M.P.)",
+    university: "Jiwaji University",
   },
   {
     degree: "B.Sc",
@@ -25,16 +23,11 @@ const educationDetails = [
     university: "Jiwaji University",
   },
   {
-    degree: "B.Ed",
-    year: "(2019-2021)",
-    institution: "SSBBSMP, Morena (M.P.)",
-    university: "Jiwaji University",
-  },
-  {
-    degree: "MCA",
-    year: "(2023-Present)",
-    institution: "GLA University, Mathura (U.P.)",
-    university: "GLA University",
+    degree: "Class X",
+    year: "(2012-2013)",
+    major: "Computer Science",
+    institution: "Gyan Ganga International Academy, Ratanpur, Bhopal (M.P.)",
+    board: "CBSE",
   },
 ];
 
