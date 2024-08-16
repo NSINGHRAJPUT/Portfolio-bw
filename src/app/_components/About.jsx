@@ -39,7 +39,7 @@ const AboutMe = () => {
         </p>
         <div className="flex flex-row gap-4 items-center justify-center mt-4">
           <Link
-            href="https://drive.google.com/file/d/10LyXsrf9TKvZRH-KGE5-4w4JHXIG9LAk"
+            href="https://drive.google.com/file/d/15OmefQIp3nUkGEtfRy5sVTBshkx75NTT"
             target="_blank"
             className="button"
           >
