@@ -56,7 +56,7 @@ export default function Skills() {
     <section id="skills" className="py-12 px-[5%] bg-gray-800 text-white">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl font-semibold mb-4">Skills</h2>
-        <p className="max-w-xl mx-auto mb-8 text-gray-400">
+        <p className=" mx-auto mb-8 text-gray-400">
           As a dedicated Full Stack Web Developer, I bring extensive expertise
           in building dynamic and responsive web applications. My skills
           encompass a wide range of technologies including React, React Native,

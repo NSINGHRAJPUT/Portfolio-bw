@@ -10,15 +10,18 @@ const Footer = () => {
       {/* Contact Info */}
       <div className="flex flex-col items-start space-y-2">
         <h2 className="text-lg font-bold">GET IN TOUCH</h2>
-        <div className="flex items-center">
+        <div className="flex items-center hover:text-yellow-500">
           <MdEmail className="mr-2" />
-          <a href="mailto:nsinghrajputx@gmail.com" className="text-white">
+          <a
+            href="mailto:nsinghrajputx@gmail.com"
+            className="text-white hover:text-yellow-500"
+          >
             nsinghrajputx@gmail.com
           </a>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center hover:text-yellow-500">
           <MdPhone className="mr-2" />
-          <a href="tel:9752661779" className="text-white">
+          <a href="tel:9752661779" className="text-white hover:text-yellow-500">
             9752661779
           </a>
         </div>
@@ -31,14 +34,14 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaGithub className="text-white text-2xl md:text-3xl mr-2" />
+          <FaGithub className="text-white hover:text-yellow-500 text-2xl md:text-3xl mr-2" />
         </Link>
         <Link
           href="https://www.linkedin.com/in/n-s-r/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaLinkedinIn className="text-white text-2xl md:text-3xl mr-2" />
+          <FaLinkedinIn className="text-white hover:text-yellow-500 text-2xl md:text-3xl mr-2" />
         </Link>
       </div>
 
