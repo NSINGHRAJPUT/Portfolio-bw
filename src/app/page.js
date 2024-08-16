@@ -10,7 +10,7 @@ import Skills from "./_components/Skills";
 
 export default function Home() {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Header />
       <main>
         <Hero />
@@ -36,6 +36,6 @@ export default function Home() {
       </main>
       <hr className="border-white border-1" />
       <Footer />
-    </>
+    </div>
   );
 }
