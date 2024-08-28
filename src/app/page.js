@@ -4,9 +4,9 @@ import Education from "./_components/Education";
 import Footer from "./_components/Footer";
 import Header from "./_components/Header";
 import Hero from "./_components/Hero";
-import Portfolio from "./_components/Portfolio";
 import Services from "./_components/Services";
 import Skills from "./_components/Skills";
+import Slider from "./_components/Slider";
 
 export default function Home() {
   return (
@@ -20,8 +20,11 @@ export default function Home() {
         <section id="skills">
           <Skills />
         </section>
-        <section id="portfolio">
+        {/* <section id="portfolio">
           <Portfolio />
+        </section> */}
+        <section id="slider">
+          <Slider />
         </section>
         <section id="education">
           <Education />
