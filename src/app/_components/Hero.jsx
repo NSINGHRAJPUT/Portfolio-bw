@@ -11,7 +11,7 @@ export default function Hero() {
       {/* Left Section */}
       <div className="flex flex-col space-y-4 md:w-3/5">
         <h1 className="heading">NEERAJ SINGH RAJPUT</h1>
-        <p className="paragraph">
+        <p className=" barlow-condensed-light">
           I am a dedicated Full Stack Web Developer with a passion for creating
           dynamic and responsive web applications. With extensive experience in
           HTML, CSS, JavaScript, React, Node.js, Express.js, Next.js, and React

@@ -10,6 +10,9 @@ import s6 from "../../assets/images/6.png";
 import s7 from "../../assets/images/7.png";
 import s8 from "../../assets/images/8.png";
 import bg from "../../assets/images/bg.png";
+import urza from "../../assets/images/urza.png";
+import riyo from "../../assets/images/riyo.png";
+import vr from "../../assets/images/vr.png";
 
 const projects = [
   {
@@ -52,6 +55,21 @@ const projects = [
     link: "https://my-portfolio-swart-beta-85.vercel.app/",
     image: s8,
   },
+  {
+    name: "Urza",
+    link: "https://urzaindia.in/",
+    image: urza,
+  },
+  {
+    name: "Riyo",
+    link: "https://web.riyorentitoverindia.in/",
+    image: riyo,
+  },
+  {
+    name: "Vehicle Rental",
+    link: "https://vehicle-rental-wine.vercel.app/",
+    image: vr,
+  },
 ];
 
 export default function Slider() {
@@ -67,7 +85,7 @@ export default function Slider() {
       </div>
       <h1 className="heading mb-8 text-center">Portfolio</h1>
       <div className={styles.banner}>
-        <div className={styles.slider} style={{ "--quantity": 8 }}>
+        <div className={styles.slider} style={{ "--quantity": 11 }}>
           {projects.map((project, index) => (
             <div
               key={index}

@@ -13,7 +13,7 @@ const AboutMe = () => {
         About Me
       </h2>
       <div className="w-full md:pl-8 flex flex-col justify-start items-start">
-        <p className="paragraph text-justify">
+        <p className="paragraph text-justify barlow-condensed-regular">
           I am a dedicated and experienced Full Stack Web Developer with a
           strong background in creating dynamic and responsive web applications.
           My expertise includes HTML, CSS, JavaScript, React, Node.js,
@@ -22,7 +22,7 @@ const AboutMe = () => {
           including dynamic content rendering, TV remote event handling, and
           context-specific UI changes in React Native applications.
         </p>
-        <p className="paragraph text-justify">
+        <p className="paragraph text-justify barlow-condensed-regular">
           In my recent projects, I have focused on integrating advanced features
           such as custom font size mappings, interactive components using
           TouchableOpacity, and managing navigation in TV apps using the
@@ -30,7 +30,7 @@ const AboutMe = () => {
           styling and my commitment to delivering user-friendly interfaces have
           consistently resulted in successful project outcomes.
         </p>
-        <p className="paragraph text-justify">
+        <p className="paragraph text-justify barlow-condensed-regular">
           I am always eager to learn and stay updated with the latest
           technologies, and I am passionate about building efficient and
           scalable web applications. Whether you are looking for a skilled

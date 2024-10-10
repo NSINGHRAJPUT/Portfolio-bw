@@ -77,9 +77,7 @@ const ContactForm = () => {
       {/* Left Section */}
       <div className="md:w-1/2">
         <h2 className="text-2xl font-semibold mb-2">Let's Talk Now</h2>
-        <p className="text-5xl font-bold mb-4">
-          Do You Have A Project In Your Mind?
-        </p>
+        <p className="text-5xl mb-4">Do You Have A Project In Your Mind?</p>
         <h3 className="text-xl font-semibold mb-4">Services Offered</h3>
         <div className="grid grid-cols-2 gap-2 mb-8">
           <span>Front End Development</span>

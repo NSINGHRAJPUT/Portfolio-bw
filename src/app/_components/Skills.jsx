@@ -1,7 +1,14 @@
 "use client";
 
 import { FaReact, FaNodeJs, FaDatabase, FaServer } from "react-icons/fa";
-import { SiMongodb, SiExpress, SiNextdotjs, SiMysql } from "react-icons/si";
+import {
+  SiMongodb,
+  SiExpress,
+  SiNextdotjs,
+  SiMysql,
+  SiElectron,
+  SiAngular,
+} from "react-icons/si";
 
 const skills = [
   {
@@ -22,11 +29,18 @@ const skills = [
     icon: FaNodeJs,
   },
   {
-    name: "MONGO DB",
+    name: "ANGULAR",
     description:
-      "Implementing NoSQL database solutions for high-performance applications.",
-    icon: SiMongodb,
+      "Developing scalable and maintainable web applications using TypeScript and Angular framework.",
+    icon: SiAngular, // Make sure to import the correct icon from your icon library
   },
+  {
+    name: "ELECTRON JS",
+    description:
+      "Building cross-platform desktop applications with web technologies like JavaScript, HTML, and CSS.",
+    icon: SiElectron, // Make sure to import the correct icon from your icon library
+  },
+
   {
     name: "EXPRESS JS",
     description: "Building robust and efficient web servers with Node.js.",
@@ -37,6 +51,12 @@ const skills = [
     description:
       "Developing server-rendered React applications for optimized performance.",
     icon: SiNextdotjs,
+  },
+  {
+    name: "MONGO DB",
+    description:
+      "Implementing NoSQL database solutions for high-performance applications.",
+    icon: SiMongodb,
   },
   {
     name: "SQL",

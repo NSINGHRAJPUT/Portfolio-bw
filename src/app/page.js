@@ -7,6 +7,7 @@ import Hero from "./_components/Hero";
 import Services from "./_components/Services";
 import Skills from "./_components/Skills";
 import Slider from "./_components/Slider";
+import "./globals.css";
 
 export default function Home() {
   return (
