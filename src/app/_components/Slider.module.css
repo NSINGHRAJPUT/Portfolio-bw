@@ -95,6 +95,9 @@
   z-index: 1;
 }
 @media screen and (max-width: 1023px) {
+  .banner {
+    height: 80vh;
+  }
   .banner .slider {
     width: 160px;
     height: 200px;
@@ -124,6 +127,9 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .banner {
+    height: 60vh;
+  }
   .banner .slider {
     width: 100px;
     height: 150px;
