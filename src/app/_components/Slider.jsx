@@ -31,28 +31,28 @@ const projects = [
     image: s3,
   },
   {
-    name: "Construction Masters",
-    link: "https://construction-masters.vercel.app/",
+    name: "Book My Cold Store",
+    link: "https://bookmycoldstore.com/",
     image: s4,
   },
   {
-    name: "Job Fair",
-    link: "https://job-fair.vercel.app/",
+    name: "Ever Sky Overseas",
+    link: "https://ielts.nsrgfx.in/",
     image: s5,
   },
   {
-    name: "First Portfolio",
-    link: "https://simpleportfolio-iota.vercel.app/",
+    name: "Raffily",
+    link: "https://www.raffily.com/",
     image: s6,
   },
   {
-    name: "Burger App",
-    link: "https://burger-orcin-phi.vercel.app/",
+    name: "Raffily Business",
+    link: "https://www.raffilybusiness.com/",
     image: s7,
   },
   {
-    name: "New Portfolio",
-    link: "https://my-portfolio-swart-beta-85.vercel.app/",
+    name: "Carpbook",
+    link: "https://www.carpbook.co.uk/",
     image: s8,
   },
   {
