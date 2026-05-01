@@ -45,6 +45,16 @@ const Footer = () => {
         </Link>
       </div>
 
+      {/* Legal Links */}
+      <div className="flex flex-col items-center space-y-2 mt-4 md:mt-0">
+        <Link href="/privacy-policy" className="text-white hover:text-yellow-500">
+          Privacy Policy
+        </Link>
+        <Link href="/terms-and-conditions" className="text-white hover:text-yellow-500">
+          Terms and Conditions
+        </Link>
+      </div>
+
       {/* Copyright */}
       <div className="mt-4 md:mt-0">
         <p className="text-white">Copyright © 2024 NSR</p>
