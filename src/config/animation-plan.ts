@@ -1,0 +1,196 @@
+import type { AnimationGuideline, AnimationPlanItem } from "@/types/animation-plan";
+
+export const animationPlan: AnimationPlanItem[] = [
+  {
+    key: "hero-animations",
+    title: "Hero Animations",
+    objective: "Create a cinematic first impression with staged headline and media reveal.",
+    preferredEngine: "framer-motion",
+    implementationNotes: [
+      "Use masked line reveal for headline with stagger.",
+      "Animate CTA group after heading settles.",
+      "Keep motion smooth with transform + opacity only.",
+    ],
+    timing: "500ms to 700ms enters; 120ms to 180ms micro transitions.",
+    trigger: "On initial viewport load.",
+  },
+  {
+    key: "page-transitions",
+    title: "Page Transitions",
+    objective: "Preserve narrative continuity between route changes.",
+    preferredEngine: "framer-motion",
+    implementationNotes: [
+      "Use AnimatePresence at layout boundary.",
+      "Exit quickly, enter slightly slower for premium rhythm.",
+      "Avoid heavy blur effects on low-power devices.",
+    ],
+    timing: "Exit 180ms to 240ms, enter 280ms to 360ms.",
+    trigger: "Route navigation.",
+  },
+  {
+    key: "mouse-effects",
+    title: "Mouse Effects",
+    objective: "Add subtle depth and responsiveness to premium surfaces.",
+    preferredEngine: "framer-motion",
+    implementationNotes: [
+      "Use pointer-driven transform interpolation for spotlight cards.",
+      "Clamp movement for stability.",
+      "Disable on touch devices.",
+    ],
+    timing: "120ms to 180ms response.",
+    trigger: "Pointer move over interactive surfaces.",
+  },
+  {
+    key: "scroll-animations",
+    title: "Scroll Animations",
+    objective: "Guide attention section-by-section with cinematic pacing.",
+    preferredEngine: "framer-motion",
+    implementationNotes: [
+      "Use whileInView for most sections.",
+      "Apply staggered reveal for grouped cards.",
+      "Use GSAP only for pinned storytelling sequences.",
+    ],
+    timing: "320ms to 560ms per section reveal.",
+    trigger: "Elements entering viewport.",
+  },
+  {
+    key: "card-hover",
+    title: "Card Hover",
+    objective: "Communicate interactivity with premium tactile feedback.",
+    preferredEngine: "framer-motion",
+    implementationNotes: [
+      "Lift by 2 to 4px and increase shadow depth.",
+      "Add directional border/glow accent where needed.",
+      "Avoid overscaling cards.",
+    ],
+    timing: "140ms to 220ms.",
+    trigger: "Hover/focus states.",
+  },
+  {
+    key: "text-reveal",
+    title: "Text Reveal",
+    objective: "Improve storytelling emphasis without harming readability.",
+    preferredEngine: "framer-motion",
+    implementationNotes: [
+      "Use line-level reveal in hero and key section titles.",
+      "Keep body copy static or minimal fade.",
+      "Prefer mask-based upward reveal.",
+    ],
+    timing: "360ms to 560ms with 40ms to 70ms stagger.",
+    trigger: "Initial render or section enter.",
+  },
+  {
+    key: "parallax",
+    title: "Parallax",
+    objective: "Add cinematic depth with layered movement.",
+    preferredEngine: "gsap",
+    implementationNotes: [
+      "Restrict GSAP usage to parallax and pinned process scenes.",
+      "Use data attributes for reusable parallax speed.",
+      "Gracefully disable for reduced-motion users.",
+    ],
+    timing: "Scroll-scrubbed, continuous.",
+    trigger: "Scroll position.",
+  },
+  {
+    key: "cursor-effects",
+    title: "Cursor Effects",
+    objective: "Create a premium desktop interaction layer.",
+    preferredEngine: "framer-motion",
+    implementationNotes: [
+      "Use custom cursor ring with contextual states.",
+      "Differentiate hover targets with cursor morph.",
+      "Hide cursor effect for touch and reduced-motion.",
+    ],
+    timing: "60ms to 120ms lag smoothing.",
+    trigger: "Pointer movement and hover states.",
+  },
+  {
+    key: "background-particles",
+    title: "Background Particles",
+    objective: "Maintain ambient motion in hero and transition scenes.",
+    preferredEngine: "css",
+    implementationNotes: [
+      "Use low-density particles with slow drift.",
+      "Keep opacity subtle to avoid visual noise.",
+      "Pause or simplify on lower performance devices.",
+    ],
+    timing: "8s to 16s loops.",
+    trigger: "Always-on ambient layer.",
+  },
+  {
+    key: "three-scene",
+    title: "Three.js Scene",
+    objective: "Deliver high-end visual identity in the hero chapter.",
+    preferredEngine: "three.js",
+    implementationNotes: [
+      "Keep one core mesh and minimal lights for performance.",
+      "Add gentle rotation and pointer-reactive tilt.",
+      "Lazy-load scene and avoid blocking first paint.",
+    ],
+    timing: "Continuous low-speed animation.",
+    trigger: "Hero viewport.",
+  },
+  {
+    key: "loading-animation",
+    title: "Loading Animation",
+    objective: "Provide elegant feedback during route and data transitions.",
+    preferredEngine: "framer-motion",
+    implementationNotes: [
+      "Use branded shimmer/loader rather than generic spinner.",
+      "Keep loader short and non-disruptive.",
+      "Prefer skeletons for content-heavy sections.",
+    ],
+    timing: "200ms to 1200ms depending on loading state.",
+    trigger: "Page/data loading boundaries.",
+  },
+  {
+    key: "page-enter",
+    title: "Page Enter",
+    objective: "Smoothly introduce each page with continuity.",
+    preferredEngine: "framer-motion",
+    implementationNotes: [
+      "Fade + slight upward translation.",
+      "Respect route priority and above-the-fold readability.",
+      "Pair with subtle section stagger.",
+    ],
+    timing: "280ms to 420ms.",
+    trigger: "Route mounted.",
+  },
+  {
+    key: "page-exit",
+    title: "Page Exit",
+    objective: "Avoid abrupt route changes and preserve premium feel.",
+    preferredEngine: "framer-motion",
+    implementationNotes: [
+      "Fast fade and slight downward shift.",
+      "Exit faster than enter for responsiveness.",
+      "Do not block navigation with long exits.",
+    ],
+    timing: "160ms to 240ms.",
+    trigger: "Before route unmount.",
+  },
+];
+
+export const animationGuidelines: AnimationGuideline[] = [
+  {
+    title: "Framer-First Policy",
+    detail: "Default to Framer Motion for all component and route transitions.",
+  },
+  {
+    title: "GSAP Only Where Necessary",
+    detail: "Use GSAP exclusively for pinned scroll narratives and advanced parallax scrubbing.",
+  },
+  {
+    title: "Performance Constraints",
+    detail: "Animate transform/opacity only; avoid layout-thrashing properties.",
+  },
+  {
+    title: "Accessibility",
+    detail: "Respect prefers-reduced-motion and provide simplified equivalents.",
+  },
+  {
+    title: "Consistency",
+    detail: "Use shared timing/easing tokens from the design system.",
+  },
+];
