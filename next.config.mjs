@@ -1,26 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    domains: ["placehold.co"], // Add your domain(s) here
+  reactStrictMode: true,
+  poweredByHeader: false,
+  turbopack: {},
+  compress: true,
+  experimental: {
+    optimizePackageImports: ["lucide-react", "framer-motion"],
   },
-  webpack: (config, { isServer }) => {
-    // Add a rule for PDF files
-    config.module.rules.push({
-      test: /\.(pdf)$/,
-      use: [
-        {
-          loader: "file-loader",
-          options: {
-            publicPath: "/_next/static/files",
-            outputPath: `${isServer ? "../" : ""}static/files/`,
-            name: "[name].[ext]",
-            esModule: false, // <-- Important
-          },
-        },
-      ],
-    });
-
-    return config;
+  images: {
+    formats: ["image/avif", "image/webp"],
+    minimumCacheTTL: 60 * 60 * 24 * 7,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "placehold.co",
+      },
+    ],
   },
 };
 
