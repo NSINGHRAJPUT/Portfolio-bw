@@ -36,4 +36,16 @@ export const blogListQuerySchema = z.object({
   limit: z.coerce.number().int().min(1).max(50).default(20),
 });
 
+export const publicBlogListQuerySchema = z.object({
+  search: z.string().optional(),
+  tag: z.string().optional(),
+  page: z.coerce.number().int().min(1).default(1),
+  limit: z.coerce.number().int().min(1).max(50).default(20),
+});
+
+export const publicBlogDetailQuerySchema = z.object({
+  include: z.enum(["related"]).optional(),
+});
+
 export type BlogPostInput = z.infer<typeof blogPostInputSchema>;
+export type PublicBlogListQuery = z.infer<typeof publicBlogListQuerySchema>;

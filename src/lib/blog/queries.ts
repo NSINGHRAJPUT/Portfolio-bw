@@ -18,6 +18,48 @@ export async function getPublishedPosts(tag?: string) {
   return posts.map((post) => serializeBlogPostListItem(post as BlogPostDocument));
 }
 
+export async function getPublicPosts(params: {
+  tag?: string;
+  search?: string;
+  page?: number;
+  limit?: number;
+}) {
+  await connectToDatabase();
+
+  const page = params.page ?? 1;
+  const limit = params.limit ?? 20;
+  const filter: Record<string, unknown> = { status: "published" };
+
+  if (params.tag) {
+    filter.tags = params.tag;
+  }
+
+  if (params.search) {
+    filter.$or = [
+      { title: { $regex: params.search, $options: "i" } },
+      { excerpt: { $regex: params.search, $options: "i" } },
+      { slug: { $regex: params.search, $options: "i" } },
+    ];
+  }
+
+  const [posts, total] = await Promise.all([
+    BlogPostModel.find(filter)
+      .sort({ publishedAt: -1 })
+      .skip((page - 1) * limit)
+      .limit(limit)
+      .lean<BlogPostDocument[]>(),
+    BlogPostModel.countDocuments(filter),
+  ]);
+
+  return {
+    posts: posts.map((post) => serializeBlogPostListItem(post as BlogPostDocument)),
+    total,
+    page,
+    limit,
+    totalPages: Math.ceil(total / limit),
+  };
+}
+
 export async function getPublishedPostBySlug(slug: string) {
   await connectToDatabase();
 
