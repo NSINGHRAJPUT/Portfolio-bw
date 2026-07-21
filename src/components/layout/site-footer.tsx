@@ -1,6 +1,7 @@
 import Link from "next/link";
 import {
   FaFacebookF,
+  FaGithub,
   FaInstagram,
   FaLinkedinIn,
   FaTwitter,
@@ -25,10 +26,11 @@ const footerLinks = {
 };
 
 const socials = [
+  { icon: FaGithub, href: siteConfig.contact.github, label: "GitHub" },
+  { icon: FaLinkedinIn, href: siteConfig.contact.linkedin, label: "LinkedIn" },
   { icon: FaInstagram, href: "#", label: "Instagram" },
-  { icon: FaFacebookF, href: "#", label: "Facebook" },
   { icon: FaTwitter, href: "#", label: "Twitter" },
-  { icon: FaLinkedinIn, href: "#", label: "LinkedIn" },
+  { icon: FaFacebookF, href: "#", label: "Facebook" },
 ];
 
 export function SiteFooter() {
@@ -49,6 +51,8 @@ export function SiteFooter() {
                 className="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 text-[var(--primary)] transition hover:border-[var(--primary)]/50 hover:bg-[var(--primary)]/10"
                 href={href}
                 key={label}
+                rel="noopener noreferrer"
+                target={href.startsWith("http") ? "_blank" : undefined}
               >
                 <Icon className="h-4 w-4" />
               </a>
@@ -89,15 +93,23 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <p className="mb-4 text-sm font-semibold">Connect With Us</p>
+          <p className="mb-4 text-sm font-semibold">Connect With Me</p>
           <ul className="space-y-2 text-sm text-[var(--fg-muted)]">
-            <li>Remote — India & worldwide</li>
+            <li>{siteConfig.contact.location}</li>
             <li>
               <a
                 className="transition hover:text-[var(--primary)]"
-                href="mailto:hello@nsrgfx.in"
+                href={`mailto:${siteConfig.contact.email}`}
               >
-                hello@nsrgfx.in
+                {siteConfig.contact.email}
+              </a>
+            </li>
+            <li>
+              <a
+                className="transition hover:text-[var(--primary)]"
+                href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`}
+              >
+                {siteConfig.contact.phone}
               </a>
             </li>
             <li>
@@ -117,12 +129,14 @@ export function SiteFooter() {
           {new Date().getFullYear()} {siteConfig.name} — All rights reserved.
         </p>
         <div className="flex gap-4">
-          {socials.map(({ icon: Icon, href, label }) => (
+          {socials.slice(0, 2).map(({ icon: Icon, href, label }) => (
             <a
               aria-label={label}
               className="text-[var(--primary)] transition hover:opacity-80"
               href={href}
               key={label}
+              rel="noopener noreferrer"
+              target="_blank"
             >
               <Icon className="h-4 w-4" />
             </a>

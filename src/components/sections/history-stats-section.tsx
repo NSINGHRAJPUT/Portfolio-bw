@@ -12,6 +12,7 @@ import { siteConfig } from "@/lib/config/site";
 
 const thumbnails = siteConfig.projects.slice(0, 4).map((project) => ({
   label: project.name.split(" ").slice(0, 2).join(" "),
+  slug: project.slug,
 }));
 
 export function HistoryStatsSection() {

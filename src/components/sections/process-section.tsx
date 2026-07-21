@@ -7,7 +7,7 @@ export function ProcessSection() {
     <section className="container-safe py-24" id="process-cinematic">
       <div className="mb-8 max-w-2xl space-y-3">
         <p className="section-eyebrow">Process</p>
-        <h2 className="text-3xl font-semibold md:text-5xl">Cinematic delivery from strategy to scale.</h2>
+        <h2 className="text-3xl font-semibold md:text-5xl">From discovery to production deployment.</h2>
       </div>
       <div className="grid gap-6 lg:grid-cols-[1.1fr_1fr]">
         <div className="space-y-4">
@@ -25,11 +25,10 @@ export function ProcessSection() {
           <Card className="min-h-[420px] space-y-4 bg-surface-2/80 p-8">
             <p className="section-eyebrow">Execution Principle</p>
             <h3 className="text-2xl font-semibold md:text-3xl">
-              Clarity in strategy, precision in craft, velocity in delivery.
+              Clear requirements, clean code, reliable delivery.
             </h3>
             <p className="text-sm text-muted">
-              Each phase is instrumented with quality gates, performance checks, and measurable outcomes so the
-              product scales without redesign debt.
+              Each phase includes code reviews, testing, and performance checks so the product scales without technical debt.
             </p>
           </Card>
         </div>

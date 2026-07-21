@@ -14,7 +14,7 @@ export function ContactCta() {
         <div className="relative mx-auto space-y-8">
           <h2 className="text-3xl font-bold text-white md:text-5xl">{cta.headline}</h2>
           <p className="mx-auto max-w-3xl text-white/55">{cta.subheadline}</p>
-          <Link href="/book-meeting">
+          <Link href="/contact">
             <Button size="lg">{cta.button}</Button>
           </Link>
         </div>

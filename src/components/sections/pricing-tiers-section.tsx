@@ -16,7 +16,7 @@ export function PricingTiersSection() {
         <p className="section-eyebrow">Pricing</p>
         <h2 className="text-3xl font-semibold md:text-4xl">Transparent engagement models.</h2>
         <p className="text-sm text-muted">
-          Pricing reflects premium craft: fast discovery, safe AI-native execution, and performance-aware engineering.
+          Pricing reflects real project scope: MVP builds, full-stack delivery, and team lead engagements.
         </p>
       </div>
 
@@ -33,7 +33,7 @@ export function PricingTiersSection() {
               <div className="flex items-center justify-between gap-3">
                 <div>
                   <h3 className="text-xl font-semibold">{tier.name}</h3>
-                  <p className="text-xs text-muted">Premium tier</p>
+                  <p className="text-xs text-muted">Project tier</p>
                 </div>
                 <Badge variant={tier.key === "launch" ? "primary" : "neutral"}>
                   {tier.key === "launch" ? "Most Popular" : "Tier"}

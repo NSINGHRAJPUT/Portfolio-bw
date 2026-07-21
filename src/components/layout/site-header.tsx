@@ -26,8 +26,8 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <Link href="/book-meeting">
-          <Button size="sm">Book a Call</Button>
+        <Link href="/contact">
+          <Button size="sm">Hire Me</Button>
         </Link>
       </div>
     </header>

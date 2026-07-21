@@ -1,24 +1,22 @@
 export const trustLogos = [
-  "Pioneer Labs",
-  "Northstar VC",
-  "Orbit Commerce",
-  "Signal Cloud",
-  "Helio Systems",
-  "Nova Capital",
+  "Luminoguru",
+  "Webguruz Technologies",
+  "Anthem Infotech",
+  "Webreate",
 ];
 
 export const aiCapabilities = [
   {
-    title: "Agentic Workflows",
-    description: "Orchestrate multi-step AI processes with guarded decision points and human handoff.",
+    title: "RESTful API Development",
+    description: "Scalable APIs with Node.js, Express, Fastify, and NestJS — plus JWT auth, middleware, secure headers, and CRUD operations.",
   },
   {
-    title: "Retrieval Intelligence",
-    description: "Ground outputs in product docs, customer insights, and internal knowledge for reliable responses.",
+    title: "Database Architecture",
+    description: "MongoDB, PostgreSQL, and MySQL — schema design, Mongoose ODM, Sequelize ORM, and optimized queries.",
   },
   {
-    title: "Automation Layer",
-    description: "Connect tools across product, support, and growth to remove repetitive operational load.",
+    title: "Third-Party Integrations",
+    description: "Payment gateways, Auth0, Twilio, Firebase, Azure Blob Storage, and cloud services at production scale.",
   },
 ];
 
@@ -26,80 +24,88 @@ export const processSteps = [
   {
     id: "01",
     title: "Discover",
-    description: "Align outcomes, users, and constraints through fast research and product diagnostics.",
+    description: "Understand requirements, user flows, and technical constraints through clear scoping and planning.",
   },
   {
     id: "02",
     title: "Design",
-    description: "Prototype premium interaction systems and AI flows focused on trust and conversion.",
+    description: "Translate Figma designs into responsive React interfaces with clean component architecture.",
   },
   {
     id: "03",
     title: "Build",
-    description: "Ship scalable architecture with observability, quality gates, and performance budgets.",
+    description: "Develop full-stack features with Node.js, NestJS, or Fastify APIs, database models, authentication, and integrations.",
   },
   {
     id: "04",
-    title: "Scale",
-    description: "Optimize continuously with analytics, experimentation, and AI-assisted growth loops.",
+    title: "Deploy",
+    description: "Ship to production with CI/CD pipelines, cloud hosting, monitoring, and performance optimization.",
   },
 ];
 
 export const testimonials = [
   {
     quote:
-      "NSRGFX transformed our product from a feature set into a premium experience. Conversion quality improved in the first release.",
-    author: "Aarav Mehta",
-    role: "Founder, Orbit Commerce",
+      "Neeraj led our React Native project with Auth0 and Twilio integration flawlessly. Pixel-perfect Figma implementation and reliable delivery throughout.",
+    author: "Project Manager",
+    role: "Webguruz Technologies",
   },
   {
     quote:
-      "The blend of AI systems thinking and interface craftsmanship is rare. Delivery was structured, fast, and reliable.",
-    author: "Nadia Khan",
-    role: "VP Product, Signal Cloud",
+      "Strong full-stack skills across Next.js, Node.js, and MongoDB. Payment gateway integration and Azure CI/CD were handled with zero margin for error.",
+    author: "Tech Lead",
+    role: "Anthem Infotech",
   },
   {
     quote:
-      "From architecture to launch experience, every detail felt intentional. Stakeholder confidence went up immediately.",
-    author: "Ishan Rao",
-    role: "COO, Helio Systems",
+      "Delivered multiple platforms — school management, e-commerce, and patent systems — with clean architecture and on-time production releases.",
+    author: "Engineering Manager",
+    role: "Luminoguru",
   },
 ];
 
 export const numbers = [
-  { value: "42+", label: "Premium products shipped" },
-  { value: "3.4x", label: "Average speed-to-launch improvement" },
-  { value: "98%", label: "Client satisfaction across engagements" },
-  { value: "<120ms", label: "Interaction latency targets achieved" },
+  { value: "4+", label: "Years of development experience" },
+  { value: "13+", label: "Production projects shipped" },
+  { value: "5+", label: "Payment gateways integrated" },
+  { value: "4", label: "Companies as developer & team lead" },
 ];
 
 export const techStack = [
-  "Next.js 15",
-  "React 19",
-  "TypeScript",
-  "Tailwind CSS v4",
-  "Framer Motion",
-  "GSAP",
-  "Three.js",
-  "Supabase",
+  "React.js",
+  "Next.js",
+  "React Native",
+  "Node.js",
+  "NestJS",
+  "Fastify",
+  "Bun",
+  "Express.js",
+  "MongoDB",
   "PostgreSQL",
-  "OpenAI API",
+  "TypeScript",
+  "Tailwind CSS",
+  "Redux Toolkit",
+  "Azure DevOps",
+  "AWS",
+  "JWT",
+  "Stripe",
+  "Razorpay",
 ];
 
 export const faqs = [
   {
-    question: "How do you blend AI with product design?",
+    question: "What stack do you work with?",
     answer:
-      "Every engagement starts with user and business outcomes, then AI is applied only where it meaningfully improves speed, quality, or decision-making.",
+      "I specialize in the MERN stack (MongoDB, Express, React, Node.js), Next.js with App Router, React Native for mobile, and backend frameworks including NestJS, Fastify, and Bun. PostgreSQL or MySQL when needed.",
   },
   {
-    question: "Do you work with startups and enterprise teams?",
+    question: "Do you work on both web and mobile?",
     answer:
-      "Yes. The process scales from founder-led MVPs to larger roadmap programs with cross-functional stakeholders.",
+      "Yes. I build responsive web applications with React and Next.js, and cross-platform mobile apps with React Native — including Auth0, Twilio, and RTL support.",
   },
   {
     question: "How quickly can a project start?",
     answer:
-      "Most projects begin within one to two weeks after discovery, depending on scope clarity and stakeholder availability.",
+      "Most projects begin within one to two weeks after scoping, depending on requirements clarity and my current availability.",
   },
 ];

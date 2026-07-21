@@ -32,7 +32,7 @@ export function InformationArchitecturePage({ page }: InformationArchitecturePag
       <div className={`pointer-events-none absolute inset-0 ${chapterAccent} opacity-90`} />
       <div className="container-safe relative py-16">
         <div className="mb-10 flex flex-wrap items-center gap-3">
-          <Badge variant="primary">NSRGFX Chapter</Badge>
+          <Badge variant="primary">Portfolio Chapter</Badge>
           <Badge>{page.path}</Badge>
           <Badge variant="success">{page.title}</Badge>
         </div>

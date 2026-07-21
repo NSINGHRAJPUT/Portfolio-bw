@@ -1,10 +1,10 @@
 import { Card } from "@/components/ui/card";
 import { CyberCard } from "@/components/ui/cyber-card";
 const principles = [
-  { title: "Outcome clarity", description: "Every engagement is defined by measurable outcomes and constraints." },
-  { title: "AI with guardrails", description: "We only automate what improves decisions, speed, and quality—with safety checks." },
-  { title: "Premium interaction craft", description: "UI and motion systems designed for conversion and long-term maintainability." },
-  { title: "Performance budgets", description: "Optimized rendering, careful bundles, and scalable architecture choices." },
+  { title: "Clean architecture", description: "Every project follows maintainable patterns — modular components, RESTful APIs, and scalable database design." },
+  { title: "Secure by default", description: "JWT authentication, bcrypt encryption, protected routes, and secure headers on every application." },
+  { title: "Pixel-perfect UI", description: "Figma designs translated into responsive React and React Native interfaces with attention to detail." },
+  { title: "Production delivery", description: "CI/CD pipelines, cloud deployment, and performance optimization so code ships reliably." },
 ];
 
 export function AboutPrinciplesSection() {
@@ -12,7 +12,7 @@ export function AboutPrinciplesSection() {
     <section className="container-safe py-16">
       <div className="mb-8 max-w-2xl space-y-2">
         <p className="section-eyebrow">Operating Principles</p>
-        <h2 className="text-3xl font-semibold text-white md:text-4xl">How NSRGFX stays premium under pressure.</h2>
+        <h2 className="text-3xl font-semibold text-white md:text-4xl">How I deliver production-ready software.</h2>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
@@ -26,10 +26,9 @@ export function AboutPrinciplesSection() {
 
       <CyberCard className="mt-10 p-6" glow={false}>
         <p className="text-sm text-white/60">
-          Built for teams evaluating AI partners who can design, engineer, and ship with confidence.
+          MCA graduate from GLA University with 4+ years building full-stack web and mobile applications across startups and enterprise teams.
         </p>
       </CyberCard>
     </section>
   );
 }
-

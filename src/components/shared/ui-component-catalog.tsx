@@ -9,7 +9,7 @@ export function UiComponentCatalog() {
         <Badge variant="primary">Reusable UI Inventory</Badge>
         <h1 className="text-4xl font-semibold md:text-5xl">Independent Component Catalog</h1>
         <p className="max-w-3xl text-sm text-muted">
-          This catalog defines reusable UI building blocks for NSRGFX. Each component is independent and can be
+          This catalog defines reusable UI building blocks for this portfolio. Each component is independent and can be
           composed safely across pages and features.
         </p>
       </div>

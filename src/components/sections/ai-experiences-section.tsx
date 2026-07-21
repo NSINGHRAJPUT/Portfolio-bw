@@ -12,12 +12,12 @@ export function AiExperiencesSection() {
     <section className="container-safe py-16">
       <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
         <div className="space-y-2">
-          <p className="section-eyebrow">AI Solutions</p>
-          <h2 className="text-3xl font-semibold md:text-4xl">Eight experiences, one orchestration layer.</h2>
+          <p className="section-eyebrow">Technical Solutions</p>
+          <h2 className="text-3xl font-semibold md:text-4xl">Integrations and tools I work with.</h2>
         </div>
         <div className="glass flex items-center gap-2 rounded-[var(--radius-xl)] px-4 py-3 text-xs text-[var(--fg-muted)]">
           <BrainCircuit className="h-4 w-4 text-(--primary)" />
-          AI-first workflows with guarded outputs
+          Production-grade integrations with secure APIs
         </div>
       </div>
 

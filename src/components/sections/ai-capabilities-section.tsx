@@ -10,8 +10,8 @@ export function AiCapabilitiesSection() {
   return (
     <section className="container-safe py-24">
       <div className="mb-8 max-w-2xl space-y-3">
-        <p className="section-eyebrow">AI Capabilities</p>
-        <h2 className="text-3xl font-semibold md:text-5xl">From experiments to production intelligence.</h2>
+        <p className="section-eyebrow">Backend & Integrations</p>
+        <h2 className="text-3xl font-semibold md:text-5xl">APIs, databases, and third-party services.</h2>
       </div>
       <div className="grid gap-4 md:grid-cols-3">
         {aiCapabilities.map((item, index) => {

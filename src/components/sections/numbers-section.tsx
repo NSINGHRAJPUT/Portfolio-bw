@@ -10,7 +10,7 @@ export function NumbersSection() {
     <section className="container-safe py-24">
       <div className="mb-8 max-w-2xl space-y-3">
         <p className="section-eyebrow">Numbers</p>
-        <h2 className="text-3xl font-semibold md:text-5xl">Performance signals that matter.</h2>
+        <h2 className="text-3xl font-semibold md:text-5xl">By the numbers.</h2>
       </div>
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
         {numbers.map((item, index) => (

@@ -11,7 +11,7 @@ export function ServicesSection() {
     <section className="container-safe space-y-8 py-24" id="services">
       <div className="max-w-2xl space-y-3">
         <p className="section-eyebrow">Services</p>
-        <h2 className="text-3xl font-semibold md:text-5xl">Precision systems for AI-native products.</h2>
+        <h2 className="text-3xl font-semibold md:text-5xl">Full-stack solutions for web and mobile.</h2>
       </div>
       <div className="grid gap-4 md:grid-cols-3">
         {siteConfig.services.map((service, index) => {

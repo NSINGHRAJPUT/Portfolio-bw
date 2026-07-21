@@ -42,7 +42,7 @@ function toFormState(post?: BlogPostDTO): FormState {
     seoTitle: post?.seoTitle ?? "",
     seoDescription: post?.seoDescription ?? "",
     ogImage: post?.ogImage ?? "",
-    authorName: post?.authorName ?? "NSRGFX",
+    authorName: post?.authorName ?? "Neeraj Singh Rajput",
     publishedAt: post?.publishedAt ? post.publishedAt.slice(0, 16) : "",
   };
 }

@@ -98,18 +98,18 @@ export function PremiumContactForm({
       <div className="grid gap-6 lg:grid-cols-[1fr_0.9fr]">
         <div className="space-y-3">
           <h1 className="text-4xl font-semibold md:text-5xl">
-            Let’s build something premium.
+            Let&apos;s build your next product.
           </h1>
           <p className="text-sm text-muted md:text-base">
-            Send a concise brief. NSRGFX replies with next steps, timeline
-            guidance, and a clear path to execution.
+            Send a project brief. I&apos;ll reply with next steps, timeline
+            guidance, and a clear path to delivery.
           </p>
           <div className="grid gap-3 sm:grid-cols-2">
             {[
               "Fast response",
               "Clear scoping",
-              "Quality gates",
-              "AI-native delivery",
+              "MERN stack delivery",
+              "Production-ready code",
             ].map((item) => (
               <div
                 key={item}
@@ -193,8 +193,8 @@ export function PremiumContactForm({
             </Button>
 
             <p className="text-xs text-muted">
-              By submitting, you agree NSRGFX may contact you about this
-              inquiry. No spam.
+              By submitting, you agree I may contact you about this inquiry. No
+              spam.
             </p>
           </form>
         </div>

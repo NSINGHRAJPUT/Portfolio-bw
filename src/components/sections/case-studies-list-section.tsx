@@ -15,7 +15,7 @@ export function CaseStudiesListSection() {
       <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
         <div className="space-y-2">
           <p className="section-eyebrow">Case Studies</p>
-          <h2 className="text-3xl font-semibold md:text-4xl">Outcome-first delivery proof.</h2>
+          <h2 className="text-3xl font-semibold md:text-4xl">Professional experience highlights.</h2>
         </div>
         <Link href="/book-meeting">
           <Button variant="secondary">

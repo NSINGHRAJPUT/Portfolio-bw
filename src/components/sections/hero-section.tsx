@@ -22,12 +22,6 @@ export function HeroSection() {
             <h1 className="text-2xl font-bold tracking-tight text-white md:text-3xl">
               {hero.cardTitle}
             </h1>
-            <p className="mt-1 text-xs font-medium uppercase tracking-wider text-[var(--primary)]">
-              Description
-            </p>
-            <p className="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
-              {hero.cardDescription}
-            </p>
 
             <MilestoneStepper />
 
@@ -55,12 +49,12 @@ export function HeroSection() {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <Link href="/book-meeting">
+            <Link href="/contact">
               <Button size="lg">
                 {hero.primaryCta} <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
-            <Link href="/case-studies">
+            <Link href="/projects">
               <Button size="lg" variant="secondary">
                 {hero.secondaryCta}
               </Button>

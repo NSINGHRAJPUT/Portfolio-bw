@@ -9,7 +9,7 @@ export function TestimonialsSection() {
     <section className="container-safe py-24" id="testimonials">
       <div className="mb-8 max-w-2xl space-y-3">
         <p className="section-eyebrow">Testimonials</p>
-        <h2 className="text-3xl font-semibold md:text-5xl">Trusted by teams that value quality at speed.</h2>
+        <h2 className="text-3xl font-semibold md:text-5xl">Trusted by teams across Mohali and beyond.</h2>
       </div>
       <div className="grid gap-4 md:grid-cols-3">
         {testimonials.map((item) => (

@@ -93,7 +93,7 @@ export function PageHero({
             </CyberCard>
           ) : (
             <CyberCard className="p-6" glow>
-              <p className="text-sm text-white/60">Premium systems, shipped with precision.</p>
+              <p className="text-sm text-white/60">Full-stack apps, shipped with precision.</p>
             </CyberCard>
           )}
         </FadeIn>

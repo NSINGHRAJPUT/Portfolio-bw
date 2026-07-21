@@ -23,7 +23,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
         <div className="container-safe flex h-16 items-center justify-between">
           <div className="flex items-center gap-8">
             <Link className="text-sm font-semibold tracking-[0.18em] text-[var(--primary)]" href="/admin/blog">
-              NSRGFX Admin
+              Portfolio Admin
             </Link>
             <nav className="hidden items-center gap-4 md:flex">
               {navItems.map((item) => (

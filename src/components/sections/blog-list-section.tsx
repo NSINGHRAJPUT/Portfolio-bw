@@ -26,7 +26,7 @@ export function BlogListSection({ posts, activeTag }: BlogListSectionProps) {
     <section className="container-safe py-16">
       <div className="mb-8 space-y-2">
         <p className="section-eyebrow">Blog</p>
-        <h2 className="text-3xl font-semibold text-white md:text-4xl">Ideas you can ship.</h2>
+        <h2 className="text-3xl font-semibold text-white md:text-4xl">Articles and engineering notes.</h2>
         {activeTag ? (
           <p className="text-sm text-muted">
             Filtering by tag: <span className="text-[var(--primary)]">{activeTag}</span>{" "}
