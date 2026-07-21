@@ -9,7 +9,7 @@ export const razorpayInstance = new Razorpay({
 // Client-side Razorpay key
 export const RAZORPAY_KEY_ID = process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || process.env.RAZORPAY_KEY_ID;
 
-// Payment verification helper
+// Payment verification  helper
 export function verifyPaymentSignature(
   orderId: string,
   paymentId: string,
