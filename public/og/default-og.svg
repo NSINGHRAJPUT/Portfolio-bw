@@ -7,6 +7,6 @@
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
   <circle cx="900" cy="120" r="180" fill="#00d4ff" opacity="0.12"/>
-  <text x="80" y="300" fill="#ffffff" font-family="Arial, sans-serif" font-size="72" font-weight="700">NSRGFX</text>
-  <text x="80" y="380" fill="#7dd3fc" font-family="Arial, sans-serif" font-size="36">AI Product Design and Engineering</text>
+  <text x="80" y="280" fill="#ffffff" font-family="Arial, sans-serif" font-size="56" font-weight="700">Neeraj Singh Rajput</text>
+  <text x="80" y="360" fill="#7dd3fc" font-family="Arial, sans-serif" font-size="36">Full Stack Developer | MERN &amp; React Native</text>
 </svg>
