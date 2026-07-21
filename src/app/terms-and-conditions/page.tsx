@@ -7,7 +7,7 @@ export default function TermsAndConditionsPage() {
         <section>
           <h2 className="mb-2 text-xl font-medium text-white">Use of service</h2>
           <p>
-            By using NSRGFX services, you agree to lawful use, accurate project communication, and respect
+            By using services offered through this website, you agree to lawful use, accurate project communication, and respect
             for intellectual property and platform security.
           </p>
         </section>
@@ -20,7 +20,7 @@ export default function TermsAndConditionsPage() {
         </section>
         <section>
           <h2 className="mb-2 text-xl font-medium text-white">Contact</h2>
-          <p>For questions regarding these terms, contact hello@nsrgfx.in.</p>
+          <p>For questions regarding these terms, contact nsinghrajputx@gmail.com.</p>
         </section>
       </div>
     </div>

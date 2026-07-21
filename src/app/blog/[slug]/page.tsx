@@ -133,8 +133,8 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
       <div className="mx-auto mt-16 max-w-3xl">
         <Card className="flex flex-col items-start justify-between gap-4 p-6 md:flex-row md:items-center">
           <div>
-            <h2 className="text-xl font-semibold">Ready to build something premium?</h2>
-            <p className="text-sm text-muted">Partner with NSRGFX for AI strategy, UX, and engineering.</p>
+            <h2 className="text-xl font-semibold">Ready to start your project?</h2>
+            <p className="text-sm text-muted">Hire me for MERN stack, React Native, and full-stack development.</p>
           </div>
           <Link href="/book-meeting">
             <Button>Book Discovery Call</Button>

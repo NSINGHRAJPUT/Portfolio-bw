@@ -1,8 +1,8 @@
 import { UiComponentCatalog } from "@/components/shared/ui-component-catalog";
 
 export const metadata = {
-  title: "Reusable UI Components | NSRGFX",
-  description: "Catalog of independent reusable UI components for NSRGFX.",
+  title: "Reusable UI Components | Neeraj Singh Rajput",
+  description: "Catalog of independent reusable UI components for the portfolio.",
 };
 
 export default function UiComponentsPage() {

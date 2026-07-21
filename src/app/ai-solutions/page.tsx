@@ -9,12 +9,12 @@ export default function AiSolutionsPage() {
   return (
     <>
       <PageHero
-        kicker="AI Solutions"
-        title="AI-native systems, shipped with premium UX."
-        subtitle="Agentic workflows, retrieval intelligence, and automation layers—designed for reliability, speed, and conversion."
-        stats={["Guarded outputs", "Structured artifacts", "Scalable workflows"]}
+        kicker="Technical Solutions"
+        title="APIs, integrations, and cloud infrastructure."
+        subtitle="RESTful APIs, payment gateways, Auth0, Twilio, Firebase, Azure, and AWS — integrated for production-scale applications."
+        stats={["REST APIs", "Payment gateways", "Cloud deployment"]}
         primaryCta={{ label: "Estimate Project", href: "/estimate-project", variant: "primary" }}
-        secondaryCta={{ label: "Book Meeting", href: "/book-meeting", variant: "secondary" }}
+        secondaryCta={{ label: "Contact Me", href: "/contact", variant: "secondary" }}
       />
       <AiCapabilitiesSection />
       <AiExperiencesSection />

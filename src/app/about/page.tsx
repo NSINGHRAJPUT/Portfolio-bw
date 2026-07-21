@@ -9,11 +9,11 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        kicker="About NSRGFX"
-        title="A premium AI + product studio mindset."
-        subtitle="Strategy, UX systems, and AI engineering—built to ship fast without redesign debt."
-        stats={["Trust-first delivery", "AI-native execution", "Performance-aware"]}
-        primaryCta={{ label: "Book Meeting", href: "/book-meeting", variant: "primary" }}
+        kicker="About Me"
+        title="Full Stack Developer with a production-first mindset."
+        subtitle="MERN stack, React Native, Next.js, and cloud integrations — built to ship fast without cutting corners."
+        stats={["4+ years experience", "Team lead roles", "Production delivery"]}
+        primaryCta={{ label: "Contact Me", href: "/contact", variant: "primary" }}
         secondaryCta={{ label: "View Services", href: "/services", variant: "secondary" }}
       />
       <AboutPrinciplesSection />

@@ -10,11 +10,11 @@ export default function ServicesPage() {
     <>
       <PageHero
         kicker="Services"
-        title="Premium delivery across AI strategy, UX, and engineering."
-        subtitle="Choose a capability path. NSRGFX ships with clear outcomes, performance budgets, and guarded AI systems."
-        stats={["Outcome-first", "Accessible UX", "Scalable architecture"]}
+        title="Full-stack development across web, mobile, and cloud."
+        subtitle="From MERN stack web apps to React Native mobile — I deliver with Node.js, NestJS, Fastify, Bun, JWT auth, REST APIs, payment integrations, and CI/CD pipelines."
+        stats={["MERN stack", "React Native", "Cloud & payments"]}
         primaryCta={{ label: "Estimate Project", href: "/estimate-project", variant: "primary" }}
-        secondaryCta={{ label: "Book Meeting", href: "/book-meeting", variant: "secondary" }}
+        secondaryCta={{ label: "Contact Me", href: "/contact", variant: "secondary" }}
       />
       <ServicesSection />
       <FaqSection />

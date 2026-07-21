@@ -8,21 +8,21 @@ export default function PrivacyPolicyPage() {
           <h2 className="mb-2 text-xl font-medium text-white">What we collect</h2>
           <p>
             We collect information you submit in forms, analytics usage events, and basic device metadata
-            needed to operate and improve NSRGFX services.
+            needed to operate and improve this portfolio website.
           </p>
         </section>
         <section>
           <h2 className="mb-2 text-xl font-medium text-white">How we use data</h2>
           <p>
-            Data is used to deliver services, communicate project updates, secure the platform, and improve
-            product decisions. We do not sell personal data.
+            Data is used to respond to inquiries, communicate project updates, secure the platform, and improve
+            the site experience. We do not sell personal data.
           </p>
         </section>
         <section>
           <h2 className="mb-2 text-xl font-medium text-white">Your rights</h2>
           <p>
             You can request access, correction, or deletion of your personal information by contacting
-            hello@nsrgfx.in.
+            nsinghrajputx@gmail.com.
           </p>
         </section>
       </div>

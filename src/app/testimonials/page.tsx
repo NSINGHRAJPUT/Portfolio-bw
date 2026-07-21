@@ -10,10 +10,10 @@ export default function TestimonialsPage() {
     <>
       <PageHero
         kicker="Testimonials"
-        title="Premium trust signals."
-        subtitle="Client outcomes, stakeholder confidence, and delivery reliability—captured with real detail."
-        stats={["Outcome clarity", "Reliable delivery", "Premium craft"]}
-        primaryCta={{ label: "Book Meeting", href: "/book-meeting", variant: "primary" }}
+        title="Trusted by teams I've worked with."
+        subtitle="Feedback from engineering managers and tech leads across Luminoguru, Webguruz, and Anthem Infotech."
+        stats={["Reliable delivery", "Clean code", "Team leadership"]}
+        primaryCta={{ label: "Contact Me", href: "/contact", variant: "primary" }}
         secondaryCta={{ label: "View Pricing", href: "/pricing", variant: "secondary" }}
       />
       <TestimonialsSection />

@@ -15,15 +15,15 @@ export default function CaseStudiesPage() {
           "@type": "CollectionPage",
           name: "Case Studies",
           url: `${seoConfig.siteUrl}/case-studies`,
-          description: "Outcome-focused case studies from NSRGFX.",
+          description: "Professional experience and delivery stories from Neeraj Singh Rajput.",
         }}
       />
       <PageHero
         kicker="Case Studies"
-        title="Proof you can measure."
-        subtitle="Outcome-focused delivery with cinematic UX, reliable AI orchestration, and performance-aware engineering."
-        stats={["Measurable lift", "Quality gates", "Fast iteration"]}
-        primaryCta={{ label: "Book Meeting", href: "/book-meeting", variant: "primary" }}
+        title="Experience across companies and domains."
+        subtitle="Full-stack delivery at Luminoguru, React Native leadership at Webguruz, and Next.js + cloud systems at Anthem Infotech."
+        stats={["Enterprise platforms", "Mobile apps", "Payment systems"]}
+        primaryCta={{ label: "Contact Me", href: "/contact", variant: "primary" }}
         secondaryCta={{ label: "Explore Projects", href: "/projects", variant: "secondary" }}
       />
       <CaseStudiesListSection />

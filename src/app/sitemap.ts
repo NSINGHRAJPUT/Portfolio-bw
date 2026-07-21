@@ -1,65 +1,96 @@
 import type { MetadataRoute } from "next";
 
-import { caseStudySeoEntries, projectSeoEntries } from "@/config/seo-content";
+import { portfolioProjects } from "@/config/projects";
+import { caseStudySeoEntries } from "@/config/seo-content";
 import { getPublishedSlugsForSitemap } from "@/lib/blog/queries";
 import { seoConfig } from "@/config/seo";
 
-const staticRoutes = [
-  "/",
-  "/about",
-  "/services",
-  "/projects",
-  "/case-studies",
-  "/ai-solutions",
-  "/blog",
-  "/resources",
-  "/testimonials",
-  "/pricing",
-  "/contact",
-  "/book-meeting",
-  "/faq",
-  "/privacy",
-  "/terms",
-  "/estimate-project",
-  "/ai-assistant",
+export const revalidate = 3600;
+
+const staticRoutes: Array<{
+  path: string;
+  priority: number;
+  changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
+}> = [
+  { path: "/", priority: 1, changeFrequency: "weekly" },
+  { path: "/about", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/services", priority: 0.85, changeFrequency: "weekly" },
+  { path: "/projects", priority: 0.9, changeFrequency: "weekly" },
+  { path: "/case-studies", priority: 0.8, changeFrequency: "weekly" },
+  { path: "/ai-solutions", priority: 0.75, changeFrequency: "monthly" },
+  { path: "/blog", priority: 0.85, changeFrequency: "daily" },
+  { path: "/resources", priority: 0.6, changeFrequency: "monthly" },
+  { path: "/resources/animation-plan", priority: 0.5, changeFrequency: "monthly" },
+  { path: "/resources/ui-components", priority: 0.5, changeFrequency: "monthly" },
+  { path: "/testimonials", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/pricing", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/contact", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/book-meeting", priority: 0.75, changeFrequency: "monthly" },
+  { path: "/faq", priority: 0.65, changeFrequency: "monthly" },
+  { path: "/privacy", priority: 0.3, changeFrequency: "yearly" },
+  { path: "/privacy-policy", priority: 0.3, changeFrequency: "yearly" },
+  { path: "/terms", priority: 0.3, changeFrequency: "yearly" },
+  { path: "/terms-and-conditions", priority: 0.3, changeFrequency: "yearly" },
+  { path: "/estimate-project", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/ai-assistant", priority: 0.6, changeFrequency: "monthly" },
 ];
+
+function buildEntry(
+  path: string,
+  options: {
+    lastModified?: Date;
+    changeFrequency?: MetadataRoute.Sitemap[number]["changeFrequency"];
+    priority?: number;
+  } = {},
+): MetadataRoute.Sitemap[number] {
+  return {
+    url: `${seoConfig.siteUrl}${path}`,
+    lastModified: options.lastModified ?? new Date(),
+    changeFrequency: options.changeFrequency ?? "weekly",
+    priority: options.priority ?? 0.7,
+  };
+}
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
 
-  const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
-    url: `${seoConfig.siteUrl}${route}`,
-    lastModified: now,
-    changeFrequency: "weekly",
-    priority: route === "/" ? 1 : 0.7,
-  }));
+  const staticEntries = staticRoutes.map((route) =>
+    buildEntry(route.path, {
+      lastModified: now,
+      changeFrequency: route.changeFrequency,
+      priority: route.priority,
+    }),
+  );
+
+  const projectEntries = portfolioProjects.map((project) =>
+    buildEntry(`/projects/${project.slug}`, {
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    }),
+  );
+
+  const caseStudyEntries = caseStudySeoEntries.map((entry) =>
+    buildEntry(`/case-studies/${entry.slug}`, {
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.75,
+    }),
+  );
 
   let blogEntries: MetadataRoute.Sitemap = [];
   try {
     const posts = await getPublishedSlugsForSitemap();
-    blogEntries = posts.map((entry) => ({
-      url: `${seoConfig.siteUrl}/blog/${entry.slug}`,
-      lastModified: entry.lastModified,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    }));
-  } catch {
-    blogEntries = [];
+    blogEntries = posts.map((entry) =>
+      buildEntry(`/blog/${entry.slug}`, {
+        lastModified: entry.lastModified,
+        changeFrequency: "weekly",
+        priority: 0.7,
+      }),
+    );
+  } catch (error) {
+    console.error("Sitemap: failed to load published blog posts", error);
   }
 
-  const projectEntries: MetadataRoute.Sitemap = projectSeoEntries.map((entry) => ({
-    url: `${seoConfig.siteUrl}/projects/${entry.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly",
-    priority: 0.8,
-  }));
-
-  const caseStudyEntries: MetadataRoute.Sitemap = caseStudySeoEntries.map((entry) => ({
-    url: `${seoConfig.siteUrl}/case-studies/${entry.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly",
-    priority: 0.75,
-  }));
-
-  return [...staticEntries, ...blogEntries, ...projectEntries, ...caseStudyEntries];
+  return [...staticEntries, ...projectEntries, ...caseStudyEntries, ...blogEntries];
 }

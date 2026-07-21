@@ -9,11 +9,11 @@ export default function FaqPage() {
     <>
       <PageHero
         kicker="FAQ"
-        title="Everything you need to decide."
-        subtitle="Clear answers on AI-native delivery, timelines, engagement models, and expected outcomes."
-        stats={["Guarded AI workflows", "Fast discovery", "Performance-aware build"]}
+        title="Everything you need to know."
+        subtitle="Clear answers on my stack, project timelines, engagement models, and what to expect when working together."
+        stats={["MERN & React Native", "Fast scoping", "Production delivery"]}
         primaryCta={{ label: "Estimate Project", href: "/estimate-project", variant: "primary" }}
-        secondaryCta={{ label: "Book Meeting", href: "/book-meeting", variant: "secondary" }}
+        secondaryCta={{ label: "Contact Me", href: "/contact", variant: "secondary" }}
       />
       <FaqSection />
     </>

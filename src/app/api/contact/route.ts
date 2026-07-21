@@ -57,22 +57,22 @@ export async function POST(request: Request) {
     await resend.emails.send({
       from: process.env.EMAIL_FROM!,
       to: email,
-      subject: "Thank you for contacting NSRGFX!",
+      subject: "Thank you for contacting Neeraj Singh Rajput!",
       text: `Hi ${name},
 
 Thanks for reaching out about ${service}.
 
-We received your message and will get back to you shortly.
+I received your message and will get back to you shortly.
 
 Regards,
-NSRGFX`,
+Neeraj Singh Rajput`,
     });
 
     // Send notification email to yourself
     await resend.emails.send({
       from: process.env.EMAIL_FROM!,
       to: process.env.EMAIL_TO!,
-      subject: "New NSRGFX Contact Form Submission",
+      subject: "New Contact Form Submission - Neeraj Singh Rajput",
       text: `Name: ${name}
 Email: ${email}
 Service: ${service}

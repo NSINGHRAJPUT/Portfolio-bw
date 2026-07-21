@@ -9,11 +9,11 @@ export default function PricingPage() {
     <>
       <PageHero
         kicker="Pricing"
-        title="Transparent premium engagement models."
-        subtitle="Choose a tier that matches your timeline and delivery confidence needs—then we ship with quality gates."
-        stats={["Discovery + plan", "Production build", "Systems support"]}
+        title="Transparent engagement models."
+        subtitle="Choose a tier that matches your project scope — from MVP builds to full-stack delivery and team lead engagements."
+        stats={["MVP build", "Full stack project", "Team lead retainer"]}
         primaryCta={{ label: "Estimate Project", href: "/estimate-project", variant: "primary" }}
-        secondaryCta={{ label: "Book Meeting", href: "/book-meeting", variant: "secondary" }}
+        secondaryCta={{ label: "Contact Me", href: "/contact", variant: "secondary" }}
       />
       <PricingTiersSection />
     </>
