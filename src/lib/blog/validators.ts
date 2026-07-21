@@ -24,7 +24,7 @@ export const blogPostInputSchema = z.object({
   seoTitle: z.string().max(120).optional().or(z.literal("")),
   seoDescription: z.string().max(300).optional().or(z.literal("")),
   ogImage: optionalImageUrl,
-  authorName: z.string().min(1).max(80).default("NSRGFX"),
+  authorName: z.string().min(1).max(80).default("Neeraj Singh Rajput"),
   publishedAt: z.string().datetime().optional().or(z.literal("")),
 });
 

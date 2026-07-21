@@ -1,3 +1,5 @@
+import { portfolioProjects } from "@/config/projects";
+
 export interface BlogSeoEntry {
   slug: string;
   title: string;
@@ -23,32 +25,33 @@ export interface CaseStudySeoEntry {
 
 export const blogSeoEntries: BlogSeoEntry[] = [];
 
-export const projectSeoEntries: ProjectSeoEntry[] = [
-  {
-    slug: "adaptive-revenue-copilot",
-    title: "Adaptive Revenue Copilot",
-    summary: "AI growth assistant that compressed campaign analysis from hours to minutes.",
-    tags: ["OpenAI", "Supabase", "Next.js"],
-  },
-  {
-    slug: "founder-os-dashboard",
-    title: "Founder OS Dashboard",
-    summary: "Unified command center for growth, product health, and forecast intelligence.",
-    tags: ["PostgreSQL", "React Query", "Framer Motion"],
-  },
-];
+export const projectSeoEntries: ProjectSeoEntry[] = portfolioProjects.map((project) => ({
+  slug: project.slug,
+  title: project.title,
+  summary: project.summary,
+  tags: project.tags,
+}));
 
 export const caseStudySeoEntries: CaseStudySeoEntry[] = [
   {
-    slug: "saas-growth-intelligence",
-    title: "SaaS Growth Intelligence Transformation",
-    summary: "Redesigned growth operations with AI-assisted experimentation and decision support.",
-    industry: "SaaS",
+    slug: "luminoguru-mern-platforms",
+    title: "Multi-Platform Full Stack Delivery at Luminoguru",
+    summary:
+      "Developed full-stack applications including Carbon Patent Group, CartoBike, School Management, Tattoo Generation, and more using MERN stack and PostgreSQL.",
+    industry: "Enterprise SaaS",
   },
   {
-    slug: "commerce-conversion-acceleration",
-    title: "Commerce Conversion Acceleration",
-    summary: "Improved conversion quality through premium UX and AI-driven funnel optimizations.",
-    industry: "E-commerce",
+    slug: "webguruz-react-native",
+    title: "React Native Lead with Auth0 & Twilio",
+    summary:
+      "Built React Native apps with Google Analytics, Auth0 authentication, Twilio integration, and Hebrew RTL support from Figma designs.",
+    industry: "Mobile Apps",
+  },
+  {
+    slug: "anthem-payment-cloud",
+    title: "Next.js, Payments & Azure CI/CD at Anthem",
+    summary:
+      "Led full-stack operations with Next.js, JWT auth, payment gateway integrations, and automated CI/CD pipelines through Azure DevOps.",
+    industry: "FinTech & Cloud",
   },
 ];

@@ -8,9 +8,8 @@ export function getOrganizationSchema() {
     url: seoConfig.siteUrl,
     logo: `${seoConfig.siteUrl}/logo.svg`,
     sameAs: [
-      "https://www.linkedin.com",
-      "https://github.com",
-      "https://x.com",
+      "https://www.linkedin.com/in/n-s-r/",
+      "https://github.com/NSINGHRAJPUT",
     ],
   };
 }

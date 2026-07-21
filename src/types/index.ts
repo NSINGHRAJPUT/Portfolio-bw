@@ -10,7 +10,10 @@ export interface Service {
 }
 
 export interface Project {
+  slug: string;
   name: string;
   summary: string;
   tags: string[];
+  company?: string;
+  period?: string;
 }

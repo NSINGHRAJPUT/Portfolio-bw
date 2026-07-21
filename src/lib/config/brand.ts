@@ -18,126 +18,151 @@ export const brandColors = {
 
 export const landingCopy = {
   hero: {
-    badge: "Trusted by founders and product teams",
-    cardTitle: "AI Product Build",
+    badge: "Full Stack Developer · MERN & React Native",
+    cardTitle: "Full Stack Build",
     cardDescription:
-      "A premium engagement to align your team on strategy, design, and engineering — from discovery through launch.",
+      "A focused engagement to architect, build, and deploy your web or mobile product — from API design through production launch.",
     milestoneFooter:
       "Milestones update as your project progresses. Complete each phase to advance.",
-    headline: ["Automate", "Intelligence.", "Accelerate Growth."],
+    headline: ["Build", "Scalable.", "Ship Production."],
     subheadline:
-      "NSRGFX combines AI product strategy, cinematic UX, and production engineering to turn ambitious ideas into premium digital experiences.",
-    primaryCta: "Start a Project",
-    secondaryCta: "View Case Studies",
+      "I build full-stack web and mobile applications with the MERN stack, Next.js, React Native, NestJS, Fastify, Bun, and cloud services — delivering clean architecture and production-ready code.",
+    primaryCta: "Hire Me",
+    secondaryCta: "View Projects",
     stats: [
-      { value: "42+", label: "Products Enhanced" },
-      { value: "3.4x", label: "Faster launches" },
-      { value: "98%", label: "Client satisfaction" },
+      { value: "4+", label: "Years experience" },
+      { value: "13+", label: "Projects delivered" },
+      { value: "4", label: "Companies served" },
     ],
     milestones: [
       {
         id: "01",
         label: "Discovery",
-        status: "Active",
         icon: "discover" as const,
+        description:
+          "Understand your requirements, user flows, and technical constraints — scoping features, stack choices, and timeline before a single line of code is written.",
       },
-      { id: "02", label: "Design", status: "Pending", icon: "design" as const },
-      { id: "03", label: "Build", status: "Pending", icon: "build" as const },
-      { id: "04", label: "Scale", status: "Pending", icon: "scale" as const },
-      { id: "05", label: "Launch", status: "Pending", icon: "launch" as const },
+      {
+        id: "02",
+        label: "Design",
+        icon: "design" as const,
+        description:
+          "Translate Figma designs into responsive React and React Native interfaces with clean component architecture, accessibility, and pixel-perfect attention to detail.",
+      },
+      {
+        id: "03",
+        label: "Build",
+        icon: "build" as const,
+        description:
+          "Develop full-stack features with Node.js, NestJS, or Fastify REST APIs, MongoDB or PostgreSQL models, JWT authentication, and third-party integrations like payments and Auth0.",
+      },
+      {
+        id: "04",
+        label: "Deploy",
+        icon: "scale" as const,
+        description:
+          "Ship to production with Azure or AWS hosting, CI/CD pipelines via Azure DevOps or GitHub Actions, and performance monitoring for a reliable release.",
+      },
+      {
+        id: "05",
+        label: "Launch",
+        icon: "launch" as const,
+        description:
+          "Go live with thorough testing, handoff documentation, and post-launch support — ensuring a smooth release and a product ready for real users.",
+      },
     ],
   },
   features: {
     eyebrow: "Capabilities",
-    headline: ["Built for Founders.", "Powered by AI."],
+    headline: ["Built for Scale.", "Powered by MERN."],
     subheadline:
-      "Every engagement blends product strategy, premium interface craft, and AI-native engineering.",
+      "Every project combines clean frontend craft, robust backend APIs, and reliable cloud infrastructure.",
     items: [
       {
-        title: "Agentic Workflows",
+        title: "MERN Stack Apps",
         description:
-          "Orchestrate multi-step AI processes with guarded decision points and human handoff.",
+          "MongoDB, Express, React, and Node.js — plus NestJS, Fastify, and Bun for high-performance APIs with JWT auth and scalable architecture.",
       },
       {
-        title: "Premium UI Systems",
+        title: "React Native Mobile",
         description:
-          "Pixel-precise interfaces with world-class motion, accessibility, and scalable architecture.",
+          "Cross-platform apps with Figma-perfect UI, Auth0, Twilio, Google Analytics, and multi-language RTL support.",
       },
       {
-        title: "Automation Layer",
+        title: "Cloud & DevOps",
         description:
-          "Connect product, growth, and support tools to remove repetitive operational load.",
+          "Azure App Services, AWS EC2/S3, CI/CD via Azure DevOps and GitHub Actions, and blob storage at scale.",
       },
       {
-        title: "Performance Engineering",
+        title: "Payment Integrations",
         description:
-          "Ship with observability, quality gates, and interaction latency targets under 120ms.",
+          "Stripe, Razorpay, PayPal, PhonePe, and Acquired — secure payment flows that process real transactions.",
       },
     ],
   },
   milestones: [
-    { value: "2019", label: "NSRGFX founded" },
-    { value: "42+", label: "Products launched" },
-    { value: "28+", label: "Clients served" },
-    { value: "6", label: "Active engagements" },
+    { value: "2023", label: "Web Developer at Webreate" },
+    { value: "2024", label: "Team Lead at Anthem Infotech" },
+    { value: "2025", label: "MERN Lead at Webguruz" },
+    { value: "2026", label: "Engineer at Luminoguru" },
   ],
   pricing: {
-    headline: "Engagement models built for premium outcomes",
+    headline: "Engagement models for every project stage",
     plans: [
       {
         key: "foundation",
-        name: "Foundation",
-        monthly: 1500,
-        yearly: 1200,
-        description: "AI + UX discovery and a premium execution plan.",
+        name: "MVP Build",
+        monthly: 800,
+        yearly: 650,
+        description: "Scope, wireframe, and build a minimum viable product.",
         features: [
-          "Product diagnostics",
-          "AI opportunity mapping",
-          "UX wireframes",
-          "Execution roadmap",
+          "Requirements analysis",
+          "UI wireframes",
+          "Core MERN features",
+          "Deployment setup",
         ],
         cta: "Estimate Project",
         highlighted: false,
       },
       {
         key: "launch",
-        name: "Launch",
-        monthly: 4800,
-        yearly: 4000,
-        description: "Design and build a production-grade premium experience.",
+        name: "Full Stack",
+        monthly: 2500,
+        yearly: 2000,
+        description: "Design and build a production-grade web or mobile application.",
         features: [
-          "High-conversion UI",
-          "Scalable architecture",
-          "Motion + 3D accents",
-          "Quality gates",
-          "Launch support",
-          "Performance budgets",
+          "Responsive React UI",
+          "Node.js REST APIs",
+          "Database design",
+          "Auth & security",
+          "Cloud deployment",
+          "Payment integration",
         ],
         cta: "Book Meeting",
         highlighted: true,
       },
       {
         key: "systems",
-        name: "Systems",
-        monthly: 9500,
-        yearly: 8000,
-        description: "Ongoing AI-native product optimization and engineering.",
+        name: "Team Lead",
+        monthly: 4500,
+        yearly: 3800,
+        description: "Lead full-stack delivery with CI/CD, code reviews, and team coordination.",
         features: [
-          "Everything in Launch",
-          "Iteration loop",
-          "Automation + integrations",
-          "Analytics setup",
-          "Dedicated support",
+          "Everything in Full Stack",
+          "Architecture decisions",
+          "CI/CD pipelines",
+          "Code review & mentoring",
+          "Ongoing support",
         ],
-        cta: "Talk to NSRGFX",
+        cta: "Get in Touch",
         highlighted: false,
       },
     ],
   },
   cta: {
-    headline: "Ready to build something premium?",
+    headline: "Ready to build your next product?",
     subheadline:
-      "Partner with NSRGFX for AI strategy, cinematic UX, and production engineering that ships.",
-    button: "Book Discovery Call",
+      "Let's discuss your web or mobile project — MERN stack, React Native, cloud integrations, and production-ready delivery.",
+    button: "Contact Me",
   },
 } as const;

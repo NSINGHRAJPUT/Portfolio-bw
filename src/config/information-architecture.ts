@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { seoConfig } from "@/config/seo";
 import type { IaPageDefinition, IaPageKey } from "@/types/information-architecture";
 
 const pageDefinitions: Record<IaPageKey, IaPageDefinition> = {
@@ -7,8 +8,8 @@ const pageDefinitions: Record<IaPageKey, IaPageDefinition> = {
     key: "home",
     title: "Home",
     path: "/",
-    purpose: "Introduce NSRGFX, establish trust quickly, and route visitors to high-intent actions.",
-    targetAudience: "Founders, product teams, and decision-makers evaluating premium AI and product partners.",
+    purpose: "Introduce Neeraj Singh Rajput, establish credibility, and route visitors to contact or project pages.",
+    targetAudience: "Clients, startups, and teams looking for a MERN stack or React Native developer.",
     conversionGoal: "Move users to Book Meeting or Estimate Project.",
     components: ["Hero", "Trust Logos", "Services Preview", "Featured Projects", "CTA"],
     seoStrategy: "Target core commercial intent keywords and strengthen internal links to service and case-study hubs.",
@@ -17,7 +18,7 @@ const pageDefinitions: Record<IaPageKey, IaPageDefinition> = {
     key: "about",
     title: "About",
     path: "/about",
-    purpose: "Show expertise, process philosophy, and differentiators behind NSRGFX.",
+    purpose: "Show expertise, development process, and professional experience as a full-stack developer.",
     targetAudience: "Prospects validating credibility, fit, and quality standards.",
     conversionGoal: "Drive visitors to Services and Book Meeting.",
     components: ["Founder Story", "Operating Principles", "Experience Timeline", "Proof Snapshot"],
@@ -57,8 +58,8 @@ const pageDefinitions: Record<IaPageKey, IaPageDefinition> = {
     key: "aiSolutions",
     title: "AI Solutions",
     path: "/ai-solutions",
-    purpose: "Position NSRGFX AI offerings across automation, copilots, and intelligent workflows.",
-    targetAudience: "Teams planning AI implementation with low-risk architecture.",
+    purpose: "Present technical integration capabilities — APIs, payment gateways, cloud services, and databases.",
+    targetAudience: "Teams needing backend integrations, payment systems, or cloud deployment.",
     conversionGoal: "Start Estimate Project or Book Meeting.",
     components: ["Solution Categories", "Use-Case Matrix", "Stack Notes", "Risk Controls"],
     seoStrategy: "Capture AI service intent terms and route readers into specialized conversion pages.",
@@ -168,7 +169,7 @@ const pageDefinitions: Record<IaPageKey, IaPageDefinition> = {
     title: "Admin",
     path: "/admin",
     purpose: "Centralize internal operations for leads, content, and delivery workflows.",
-    targetAudience: "Internal NSRGFX team members with admin roles.",
+    targetAudience: "Site administrator managing blog content.",
     conversionGoal: "Operational efficiency and quality control.",
     components: ["Lead Queue", "Content Manager", "Project Ops", "Analytics Console"],
     seoStrategy: "Noindex, private access only, and strict role-based controls.",
@@ -234,7 +235,7 @@ export function getIaPage(key: IaPageKey): IaPageDefinition {
 export function createIaMetadata(key: IaPageKey): Metadata {
   const page = pageDefinitions[key];
   return {
-    title: `${page.title} | NSRGFX`,
+    title: `${page.title} | ${seoConfig.siteName}`,
     description: page.purpose,
     alternates: { canonical: page.path },
   };

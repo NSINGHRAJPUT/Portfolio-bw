@@ -1,11 +1,19 @@
-import { NavItem, Project, Service } from "@/types";
+import { featuredProjects } from "@/config/projects";
+import { NavItem, Service } from "@/types";
 
 export const siteConfig = {
-  name: "NSRGFX",
-  title: "NSRGFX - AI Product Design and Engineering",
+  name: "Neeraj Singh Rajput",
+  title: "Neeraj Singh Rajput - Full Stack Developer | MERN & React Native",
   description:
-    "Premium AI-first freelancer portfolio for high-performance product design, automation, and web engineering.",
+    "Full Stack Developer specializing in MERN stack, React Native, Next.js, and cloud integrations. Building scalable web and mobile applications from Mohali, India.",
   url: "https://www.nsrgfx.in",
+  contact: {
+    email: "nsinghrajputx@gmail.com",
+    phone: "+91 9752661779",
+    location: "Mohali, India",
+    linkedin: "https://www.linkedin.com/in/n-s-r/",
+    github: "https://github.com/NSINGHRAJPUT",
+  },
   nav: [
     { label: "Home", href: "/" },
     { label: "Services", href: "/services" },
@@ -15,42 +23,30 @@ export const siteConfig = {
   ] satisfies NavItem[],
   services: [
     {
-      title: "AI Product Strategy",
+      title: "Full Stack Web Development",
       description:
-        "From problem framing to agentic workflows, I design AI-native products users trust and teams can ship.",
-      outcomes: ["Faster validation cycles", "Lower feature risk"],
+        "End-to-end MERN and Next.js applications with responsive React interfaces, scalable Node.js, NestJS, and Fastify APIs, and MongoDB or PostgreSQL backends.",
+      outcomes: ["Production-ready apps", "REST API integration"],
     },
     {
-      title: "Premium UI Engineering",
+      title: "React Native Mobile Apps",
       description:
-        "Pixel-precise interfaces with world-class motion, accessibility, and scalable frontend architecture.",
-      outcomes: ["Higher conversion quality", "Consistent design system"],
+        "Cross-platform mobile apps with pixel-perfect Figma implementations, Auth0 authentication, Twilio integration, and RTL language support.",
+      outcomes: ["iOS & Android delivery", "Real-time analytics"],
     },
     {
-      title: "Automation and Integrations",
+      title: "Cloud & Payment Integration",
       description:
-        "Operational automations connecting product, growth, and support with robust data and observability.",
-      outcomes: ["Reduced manual operations", "Reliable delivery workflows"],
+        "Azure and AWS deployments, CI/CD pipelines, blob storage, and payment gateways including Stripe, Razorpay, PayPal, and PhonePe.",
+      outcomes: ["Automated deployments", "Secure transactions"],
     },
   ] satisfies Service[],
-  projects: [
-    {
-      name: "Adaptive Revenue Copilot",
-      summary:
-        "AI growth assistant that helped a SaaS team cut campaign analysis time from hours to minutes.",
-      tags: ["OpenAI", "Supabase", "Next.js"],
-    },
-    {
-      name: "Founder OS Dashboard",
-      summary:
-        "Unified command center with forecasts, user behavior signals, and product health in one interface.",
-      tags: ["PostgreSQL", "React Query", "Framer Motion"],
-    },
-    {
-      name: "Autonomous Support Agent",
-      summary:
-        "Multi-step support workflow orchestration with confidence scoring and human handoff safeguards.",
-      tags: ["Zustand", "Edge API", "Analytics"],
-    },
-  ] satisfies Project[],
+  projects: featuredProjects.map((project) => ({
+    slug: project.slug,
+    name: project.title,
+    summary: project.summary,
+    tags: project.tags.slice(0, 4),
+    company: project.company,
+    period: project.period,
+  })),
 };

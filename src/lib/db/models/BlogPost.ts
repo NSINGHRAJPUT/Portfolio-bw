@@ -12,7 +12,7 @@ const blogPostSchema = new Schema(
     seoTitle: { type: String },
     seoDescription: { type: String, maxlength: 300 },
     ogImage: { type: String },
-    authorName: { type: String, default: "NSRGFX", trim: true },
+    authorName: { type: String, default: "Neeraj Singh Rajput", trim: true },
     publishedAt: { type: Date },
   },
   { timestamps: true },
