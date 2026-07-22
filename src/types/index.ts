@@ -16,4 +16,6 @@ export interface Project {
   tags: string[];
   company?: string;
   period?: string;
+  url?: string;
+  category?: "personal" | "company";
 }

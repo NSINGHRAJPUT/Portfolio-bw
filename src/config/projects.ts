@@ -13,6 +13,7 @@ export interface PortfolioProject {
   description: string;
   highlights: ProjectHighlight[];
   tags: string[];
+  category: "personal" | "company";
   featured?: boolean;
 }
 
@@ -50,12 +51,13 @@ export const portfolioProjects: PortfolioProject[] = [
       },
     ],
     tags: ["MERN Stack", "Azure", "SQL Server", "JWT", "CI/CD"],
+    category: "company",
     featured: true,
   },
   {
     slug: "afrirentals",
     title: "Afrirentals",
-    company: "Personal / Client Product",
+    company: "Webguruz",
     period: "July 2024 – Feb 2025",
     url: "https://afrirentals.com/",
     summary:
@@ -92,6 +94,7 @@ export const portfolioProjects: PortfolioProject[] = [
       },
     ],
     tags: ["Marketplace", "Real Estate", "Automotive", "MERN Stack", "Mobile App"],
+    category: "company",
     featured: true,
   },
   {
@@ -134,6 +137,7 @@ export const portfolioProjects: PortfolioProject[] = [
       },
     ],
     tags: ["React", "Node.js", "PostgreSQL", "Stripe", "Marketplace", "Mobile App"],
+    category: "company",
     featured: true,
   },
   {
@@ -171,6 +175,7 @@ export const portfolioProjects: PortfolioProject[] = [
       },
     ],
     tags: ["Next.js", "SaaS", "Browser APIs", "PDF", "Image Tools", "Product"],
+    category: "personal",
     featured: true,
   },
   {
@@ -204,6 +209,7 @@ export const portfolioProjects: PortfolioProject[] = [
       },
     ],
     tags: ["Next.js", "Portfolio", "CMS", "MongoDB", "SEO", "Freelance"],
+    category: "personal",
     featured: true,
   },
   {
@@ -245,6 +251,7 @@ export const portfolioProjects: PortfolioProject[] = [
       },
     ],
     tags: ["Next.js", "MERN Stack", "PostgreSQL", "SEO", "Auth"],
+    category: "company",
     featured: true,
   },
   {
@@ -286,6 +293,7 @@ export const portfolioProjects: PortfolioProject[] = [
       },
     ],
     tags: ["Next.js", "Video Calls", "Healthcare", "SaaS", "Auth", "Product"],
+    category: "personal",
     featured: true,
   },
   {
@@ -332,6 +340,7 @@ export const portfolioProjects: PortfolioProject[] = [
       },
     ],
     tags: ["Next.js", "School OS", "Cloud", "PostgreSQL", "Auth", "SaaS"],
+    category: "personal",
     featured: true,
   },
   {
@@ -373,6 +382,7 @@ export const portfolioProjects: PortfolioProject[] = [
       },
     ],
     tags: ["Community", "Gujarati", "Next.js", "Culture", "Events"],
+    category: "personal",
     featured: true,
   },
   {
@@ -406,6 +416,7 @@ export const portfolioProjects: PortfolioProject[] = [
       },
     ],
     tags: ["Video Production", "Next.js", "SaaS", "Product", "MERN Stack"],
+    category: "personal",
     featured: true,
   },
   {
@@ -445,7 +456,42 @@ export const portfolioProjects: PortfolioProject[] = [
       },
     ],
     tags: ["React", "Node.js", "PostgreSQL", "AI", "MERN Stack", "JWT"],
+    category: "company",
     featured: false,
+  },
+  {
+    slug: "ielts",
+    title: "Ever Sky Overseas",
+    company: "Personal Product",
+    period: "2025 – Present",
+    url: "https://ielts.nsrgfx.in/",
+    summary:
+      "Study abroad consultancy platform for Indian students — admissions, visas, scholarships, IELTS guidance, pricing, and free consultation workflows.",
+    description:
+      "Ever Sky Overseas is a modern study-abroad consultancy website helping Indian students explore world-class education abroad. The platform covers end-to-end support for admissions, visas, scholarships, and counseling, with clear service pages, pricing, resources, and a free consultation funnel.",
+    highlights: [
+      {
+        label: "Student Journey",
+        items: [
+          "Hero-led landing with clear CTAs for free consultation and pricing",
+          "About, services, pricing, resources, and contact flows",
+          "Trusted-by messaging and destination-focused positioning",
+          "Conversion-focused UI for lead capture and counseling bookings",
+        ],
+      },
+      {
+        label: "Platform",
+        items: [
+          "Responsive marketing site optimized for desktop and mobile",
+          "Service and resource pages for study-abroad decision support",
+          "Consultation funnel for inbound student inquiries",
+          "Built and hosted under the NSRGFX product ecosystem",
+        ],
+      },
+    ],
+    tags: ["Study Abroad", "Consultancy", "Next.js", "Lead Generation", "Education"],
+    category: "personal",
+    featured: true,
   },
   {
     slug: "school-management-system",
@@ -486,6 +532,7 @@ export const portfolioProjects: PortfolioProject[] = [
       },
     ],
     tags: ["React", "Node.js", "PostgreSQL", "MERN Stack", "JWT", "ERP"],
+    category: "company",
     featured: false,
   },
   {
@@ -524,6 +571,7 @@ export const portfolioProjects: PortfolioProject[] = [
       },
     ],
     tags: ["Next.js 15", "SSR", "Stripe", "NextAuth", "MongoDB", "Azure"],
+    category: "company",
     featured: true,
   },
   {
@@ -563,6 +611,7 @@ export const portfolioProjects: PortfolioProject[] = [
       },
     ],
     tags: ["React", "MERN Stack", "React Query", "JWT", "Azure", "MongoDB"],
+    category: "company",
     featured: true,
   },
   {
@@ -606,6 +655,7 @@ export const portfolioProjects: PortfolioProject[] = [
       },
     ],
     tags: ["React", "Redux Toolkit", "MERN Stack", "PayPal", "Azure DevOps", "MongoDB"],
+    category: "company",
     featured: true,
   },
   {
@@ -645,6 +695,7 @@ export const portfolioProjects: PortfolioProject[] = [
       },
     ],
     tags: ["React", "MERN Stack", "PhonePe", "JWT", "Azure", "MongoDB"],
+    category: "company",
     featured: true,
   },
   {
@@ -680,6 +731,7 @@ export const portfolioProjects: PortfolioProject[] = [
       },
     ],
     tags: ["React", "MERN Stack", "JWT", "Formik", "FTP", "MongoDB"],
+    category: "company",
     featured: false,
   },
   {
@@ -714,6 +766,7 @@ export const portfolioProjects: PortfolioProject[] = [
       },
     ],
     tags: ["Electron.js", "MERN Stack", "MongoDB", "Desktop App"],
+    category: "company",
     featured: false,
   },
   {
@@ -744,6 +797,7 @@ export const portfolioProjects: PortfolioProject[] = [
       },
     ],
     tags: ["React", "MERN Stack", "JWT", "Vercel"],
+    category: "company",
     featured: false,
   },
   {
@@ -778,11 +832,27 @@ export const portfolioProjects: PortfolioProject[] = [
       },
     ],
     tags: ["React", "MERN Stack", "Azure Blob", "JWT", "MongoDB"],
+    category: "company",
     featured: false,
   },
 ];
 
 export const featuredProjects = portfolioProjects.filter((project) => project.featured);
+
+export const personalProducts = portfolioProjects.filter(
+  (project) => project.category === "personal",
+);
+
+export const companyProjects = portfolioProjects.filter(
+  (project) => project.category === "company",
+);
+
+export type ProjectCategoryFilter = "personal" | "company" | "all";
+
+export function getProjectsByCategory(category: ProjectCategoryFilter = "personal") {
+  if (category === "all") return portfolioProjects;
+  return portfolioProjects.filter((project) => project.category === category);
+}
 
 export function getProjectBySlug(slug: string) {
   return portfolioProjects.find((project) => project.slug === slug);

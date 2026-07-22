@@ -1,4 +1,4 @@
-import { featuredProjects } from "@/config/projects";
+import { personalProducts } from "@/config/projects";
 import { NavItem, Service } from "@/types";
 
 export const siteConfig = {
@@ -13,9 +13,12 @@ export const siteConfig = {
     location: "Mohali, India",
     linkedin: "https://www.linkedin.com/in/n-s-r/",
     github: "https://github.com/NSINGHRAJPUT",
+    resume:
+      "https://drive.google.com/file/d/1--6RFnZO_3DPRppXEh4V_MUyKVA_qNcH/view?usp=sharing",
   },
   nav: [
     { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
     { label: "Blog", href: "/blog" },
     { label: "Projects", href: "/projects" },
@@ -41,12 +44,14 @@ export const siteConfig = {
       outcomes: ["Automated deployments", "Secure transactions"],
     },
   ] satisfies Service[],
-  projects: featuredProjects.map((project) => ({
+  projects: personalProducts.map((project) => ({
     slug: project.slug,
     name: project.title,
     summary: project.summary,
     tags: project.tags.slice(0, 4),
     company: project.company,
     period: project.period,
+    url: project.url,
+    category: project.category,
   })),
 };

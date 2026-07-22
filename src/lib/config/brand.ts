@@ -28,10 +28,10 @@ export const landingCopy = {
     subheadline:
       "I build full-stack web and mobile applications with the MERN stack, Next.js, React Native, NestJS, Fastify, Bun, and cloud services — delivering clean architecture and production-ready code.",
     primaryCta: "Hire Me",
-    secondaryCta: "View Projects",
+    secondaryCta: "View Products",
     stats: [
       { value: "4+", label: "Years experience" },
-      { value: "20+", label: "Projects delivered" },
+      { value: "21+", label: "Projects delivered" },
       { value: "4", label: "Companies served" },
     ],
     milestones: [
@@ -112,8 +112,8 @@ export const landingCopy = {
       {
         key: "foundation",
         name: "MVP Build",
-        monthly: 800,
-        yearly: 650,
+        monthly: 160,
+        yearly: 130,
         description: "Scope, wireframe, and build a minimum viable product.",
         features: [
           "Requirements analysis",
@@ -127,8 +127,8 @@ export const landingCopy = {
       {
         key: "launch",
         name: "Full Stack",
-        monthly: 2500,
-        yearly: 2000,
+        monthly: 500,
+        yearly: 400,
         description: "Design and build a production-grade web or mobile application.",
         features: [
           "Responsive React UI",
@@ -144,8 +144,8 @@ export const landingCopy = {
       {
         key: "systems",
         name: "Team Lead",
-        monthly: 4500,
-        yearly: 3800,
+        monthly: 900,
+        yearly: 760,
         description: "Lead full-stack delivery with CI/CD, code reviews, and team coordination.",
         features: [
           "Everything in Full Stack",

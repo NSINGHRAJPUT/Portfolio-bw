@@ -11,18 +11,28 @@ const pageDefinitions: Record<IaPageKey, IaPageDefinition> = {
     purpose: "Introduce Neeraj Singh Rajput, establish credibility, and route visitors to contact or project pages.",
     targetAudience: "Clients, startups, and teams looking for a MERN stack or React Native developer.",
     conversionGoal: "Move users to Book Meeting or Estimate Project.",
-    components: ["Hero", "Trust Logos", "Services Preview", "Featured Projects", "CTA"],
-    seoStrategy: "Target core commercial intent keywords and strengthen internal links to service and case-study hubs.",
+    components: ["Hero", "Trust Logos", "Services Preview", "Personal Products Glimpse", "CTA"],
+    seoStrategy:
+      "Target core commercial intent keywords, ItemList schema for personal products, and internal links to product and service hubs.",
   },
   about: {
     key: "about",
     title: "About",
     path: "/about",
-    purpose: "Show expertise, development process, and professional experience as a full-stack developer.",
-    targetAudience: "Prospects validating credibility, fit, and quality standards.",
-    conversionGoal: "Drive visitors to Services and Book Meeting.",
-    components: ["Founder Story", "Operating Principles", "Experience Timeline", "Proof Snapshot"],
-    seoStrategy: "Optimize for branded trust queries and E-E-A-T with strong entity context.",
+    purpose:
+      "Present Neeraj Singh Rajput's full profile — name, role, summary, experience, education, journey, and skills.",
+    targetAudience: "Prospects validating credibility, fit, and depth of experience.",
+    conversionGoal: "Drive visitors to Contact, Projects, and Personal Products.",
+    components: [
+      "Profile Hero",
+      "Experience Timeline",
+      "Education",
+      "Career Journey",
+      "Skills & Principles",
+      "CTA",
+    ],
+    seoStrategy:
+      "Optimize for branded trust queries and Person schema with alumni, skills, and contact entity signals.",
   },
   services: {
     key: "services",
@@ -36,13 +46,16 @@ const pageDefinitions: Record<IaPageKey, IaPageDefinition> = {
   },
   projects: {
     key: "projects",
-    title: "Projects",
+    title: "Projects & Personal Products",
     path: "/projects",
-    purpose: "Provide broad evidence of quality, domain range, and execution depth.",
-    targetAudience: "Prospects comparing portfolio relevance to their product goals.",
-    conversionGoal: "Open Project Detail pages and contact flow.",
-    components: ["Project Filter", "Project Cards", "Tags", "Results Snapshot"],
-    seoStrategy: "Index each project summary with structured snippets and link clusters by domain.",
+    purpose:
+      "Showcase personal products available to buy or license, plus company and client delivery with clear category filters.",
+    targetAudience:
+      "Buyers looking for ready products, and prospects comparing portfolio relevance to their goals.",
+    conversionGoal: "Open personal product pages, live demos, and contact flow.",
+    components: ["Category Filter Tabs", "Personal Product Cards", "Company Work Cards", "Tags", "Live Links"],
+    seoStrategy:
+      "Index every project page, emphasize personal-product ItemList schema, and cluster internal links to product detail URLs.",
   },
   caseStudies: {
     key: "caseStudies",
