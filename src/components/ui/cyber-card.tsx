@@ -23,9 +23,9 @@ export function CyberCard({
   const cardInner = (
     <div
       className={cn(
-        "cyber-card relative overflow-hidden rounded-2xl",
+        "relative overflow-hidden rounded-2xl",
+        runningBorder ? "cyber-card-running" : "cyber-card",
         glow && !runningBorder && "cyber-card-glow",
-        runningBorder && "cyber-card-inner",
         className,
       )}
     >

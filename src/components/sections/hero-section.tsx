@@ -2,7 +2,6 @@
 
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 import { FadeIn } from "@/components/animation/fade-in";
 import { HomeSection } from "@/components/layout/home-section";
@@ -17,7 +16,7 @@ export function HeroSection() {
   return (
     <HomeSection className="py-16 md:py-24">
       <FadeIn>
-        <CyberCard className="w-full" glow reflected runningBorder>
+        <CyberCard className="w-full" runningBorder>
           <div className="p-8 md:p-10">
             <h1 className="text-2xl font-bold tracking-tight text-white md:text-3xl">
               {hero.cardTitle}
@@ -31,12 +30,7 @@ export function HeroSection() {
           </div>
         </CyberCard>
 
-        <motion.div
-          animate={{ opacity: 1, y: 0 }}
-          className="mt-20 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-        >
+        <div className="mt-20 text-center">
           <h2 className="text-3xl font-bold leading-tight md:text-5xl lg:text-6xl">
             {hero.headline[0]}{" "}
             <span className="bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] bg-clip-text text-transparent">
@@ -69,7 +63,7 @@ export function HeroSection() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </FadeIn>
     </HomeSection>
   );
