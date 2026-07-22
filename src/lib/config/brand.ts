@@ -31,7 +31,7 @@ export const landingCopy = {
     secondaryCta: "View Projects",
     stats: [
       { value: "4+", label: "Years experience" },
-      { value: "13+", label: "Projects delivered" },
+      { value: "20+", label: "Projects delivered" },
       { value: "4", label: "Companies served" },
     ],
     milestones: [
