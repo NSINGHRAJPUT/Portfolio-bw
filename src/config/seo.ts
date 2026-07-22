@@ -5,7 +5,7 @@ export const seoConfig = {
   titleTemplate: "%s | Neeraj Singh Rajput",
   defaultDescription:
     "Full Stack Developer specializing in MERN stack, React Native, Next.js, and cloud integrations. Building scalable web and mobile applications from Mohali, India.",
-  defaultOgImage: "/og/default-og.svg",
+  defaultOgImage: "/opengraph-image",
   xHandle: "@nsinghrajput",
   locale: "en_US",
   keywords: [

@@ -11,7 +11,7 @@ export default function ProjectsPage() {
       <PageHero
         kicker="Projects"
         title="Real products built and deployed."
-        subtitle="From Carbon Patent Group and CartoBike at Luminoguru to Raffily, Carplake, and Condominium Portal — full-stack delivery across legal tech, marketplaces, fintech, and enterprise platforms."
+        subtitle="From Condominium Portal and Afrirentals to UseIt, PawCare, and ApkaOS — personal products and client platforms across marketplaces, edtech, healthcare, and SaaS."
         stats={["MERN stack", "React Native", "Cloud integrations"]}
         primaryCta={{ label: "Contact Me", href: "/contact", variant: "primary" }}
         secondaryCta={{ label: "See Case Studies", href: "/case-studies", variant: "secondary" }}

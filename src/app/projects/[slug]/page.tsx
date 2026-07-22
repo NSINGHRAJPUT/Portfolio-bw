@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/shared/json-ld";
 import { getProjectBySlug, portfolioProjects } from "@/config/projects";
 import { seoConfig } from "@/config/seo";
+import { getProjectImage } from "@/lib/projects/images";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { getCreativeWorkSchema } from "@/lib/seo/schema";
 
@@ -24,11 +25,14 @@ export async function generateMetadata({ params }: ProjectDetailPageProps): Prom
   const project = getProjectBySlug(slug);
   if (!project) return {};
 
+  const image = getProjectImage(project.slug);
+
   return buildPageMetadata({
     title: project.title,
     description: project.summary,
     path: `/projects/${project.slug}`,
     keywords: project.tags,
+    image,
   });
 }
 
@@ -39,6 +43,8 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
   if (!project) {
     notFound();
   }
+
+  const image = getProjectImage(project.slug);
 
   return (
     <section className="container-safe py-16">
@@ -58,11 +64,20 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
       </div>
 
       <div className="mx-auto max-w-3xl space-y-8">
+        {image ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            alt=""
+            className="aspect-[16/9] w-full rounded-2xl border border-white/10 object-cover"
+            src={image}
+          />
+        ) : null}
+
         <div className="space-y-3">
           <p className="text-sm text-[var(--primary)]">{project.period}</p>
           <h1 className="text-4xl font-semibold md:text-5xl">{project.title}</h1>
-          <p className="text-sm text-muted">{project.company}</p>
-          <p className="text-lg text-muted">{project.description}</p>
+          <p className="text-sm text-white/50">{project.company}</p>
+          <p className="text-lg text-white/70">{project.description}</p>
           {project.url ? (
             <a
               className="inline-flex items-center gap-2 text-sm text-[var(--primary)] hover:underline"

@@ -192,7 +192,7 @@ export const aiArchitectureLayers: AiArchitectureLayer[] = [
   {
     name: "Service Layer",
     responsibility: "External integrations for LLM calls, persistence, and analytics.",
-    modules: ["services/openai", "services/supabase", "services/analytics"],
+    modules: ["services/api", "services/database", "services/analytics"],
   },
   {
     name: "Data Layer",

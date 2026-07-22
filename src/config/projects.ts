@@ -18,44 +18,80 @@ export interface PortfolioProject {
 
 export const portfolioProjects: PortfolioProject[] = [
   {
-    slug: "carbon-patent-group",
-    title: "Carbon Patent Group",
-    company: "Luminoguru Pvt Ltd",
-    period: "2025 – Present",
-    url: "https://carbon-patent.lusites.xyz/",
+    slug: "condominium-portal",
+    title: "Condominium Portal",
+    company: "Tiny Script Soft Tech Pvt. Ltd.",
+    period: "Jan 2024 – Nov 2024",
+    url: "https://condominiumportal.com/",
     summary:
-      "Tier-1 Canadian patent prosecution boutique website with instant fee estimator, client login, service pages, and contact workflows.",
+      "Real estate platform connecting property owners with customers — dashboards, listings, JWT auth, booking workflows, and Azure CI/CD.",
     description:
-      "A professional web platform for Carbon Patent Group — a Canadian patent prosecution boutique trusted by innovative companies, research institutions, and foreign law firms worldwide.",
+      "Web platform connecting property owners with customers seeking real estate and related services with secure booking workflows and media management.",
     highlights: [
       {
         label: "Platform",
         items: [
-          "Marketing site for Canadian patent prosecution services",
-          "Instant fee estimator for patent drafting & filing",
-          "Secure client login portal",
-          "Multi-section service pages (About, Team, Services, Foreign Agents)",
+          "User dashboards & property listing management",
+          "Secure JWT authentication",
+          "Service booking workflows",
         ],
       },
       {
-        label: "Features",
+        label: "Cloud & DevOps",
         items: [
-          "Contact forms with service selection (Patent Drafting, Canadian Prosecution)",
-          "FAQ section covering PCT filings, costs, and international patents",
-          "Recognition badges and client segment showcases",
-          "Mobile-responsive layout with SEO-optimized content",
+          "Azure Web App & Static Web App",
+          "Azure Blob for media storage",
+          "CI/CD pipelines via Git/Bitbucket",
         ],
       },
       {
-        label: "Domain",
+        label: "Stack",
+        items: ["MERN Stack", "Microsoft SQL Server", "REST APIs"],
+      },
+    ],
+    tags: ["MERN Stack", "Azure", "SQL Server", "JWT", "CI/CD"],
+    featured: true,
+  },
+  {
+    slug: "afrirentals",
+    title: "Afrirentals",
+    company: "Personal / Client Product",
+    period: "July 2024 – Feb 2025",
+    url: "https://afrirentals.com/",
+    summary:
+      "Africa-focused marketplace to buy, rent, and hire properties, cars, and professionals — spanning real estate, automotive, construction, and event services.",
+    description:
+      "Afrirentals is a multi-vertical platform simplifying property, services, and mobility across Africa. Users discover trusted real estate listings, home & property services, construction experts, automotive solutions, and event support — designed for owners, professionals, and everyday needs.",
+    highlights: [
+      {
+        label: "Marketplace",
         items: [
-          "Life sciences, pharmaceuticals, chemistry, medical devices",
-          "Software, electrical, mechanical, and emerging technologies",
-          "Universities, startups, multinationals, and foreign law firm partners",
+          "Properties for sale and rent across African cities",
+          "Cars for sale and rent with verified listings",
+          "Multi-language support (English & French)",
+          "Mobile apps on App Store and Google Play",
+        ],
+      },
+      {
+        label: "Services Network",
+        items: [
+          "Home & property services — plumbers, electricians, cleaners, solar, CCTV",
+          "Land & construction — contractors, surveyors, borehole drilling",
+          "Automotive — mechanics, detailing, tire and battery services",
+          "Event & venue support — decorators, photographers, DJs, catering",
+        ],
+      },
+      {
+        label: "Platform",
+        items: [
+          "Add Property / listing onboarding for owners",
+          "Service provider discovery by category and city",
+          "Auth flows for login/register and professional growth",
+          "Vision: empower Africa's property and service economy digitally",
         ],
       },
     ],
-    tags: ["Next.js", "MERN Stack", "PostgreSQL", "SEO", "Auth"],
+    tags: ["Marketplace", "Real Estate", "Automotive", "MERN Stack", "Mobile App"],
     featured: true,
   },
   {
@@ -101,10 +137,282 @@ export const portfolioProjects: PortfolioProject[] = [
     featured: true,
   },
   {
+    slug: "useit",
+    title: "UseIt — ToolKit Pro",
+    company: "Personal Product",
+    period: "2025 – Present",
+    url: "https://useit.nsrgfx.in",
+    summary:
+      "First personal SaaS product — 60 browser-local conversion tools for images, PDFs, documents, and text/data with premium UX and no watermarks.",
+    description:
+      "UseIt (ToolKit Pro) is my first product: a golden-dark conversion workspace for images, PDFs, Word documents, and data utilities. Most tools run entirely in the browser for privacy and speed — convert, compress, resize, merge, format, hash, and more without accounts or watermarks.",
+    highlights: [
+      {
+        label: "Tool Suites",
+        items: [
+          "25 image tools — convert, compress, resize, crop, rotate, strip metadata",
+          "10 PDF tools — merge, split, compress, rotate, extract, PDF ↔ images",
+          "10 document tools — DOCX/PPTX/XLSX/CSV conversions and Markdown pipelines",
+          "15 text & data tools — JSON, Base64, URL encode, MD5/SHA-256, QR, counters",
+        ],
+      },
+      {
+        label: "Product",
+        items: [
+          "Browser-local processing for privacy-first conversions",
+          "Instant downloads with no watermark",
+          "Secure server path only when Office documents require it",
+          "Premium UX with category browsing and featured workflows",
+        ],
+      },
+      {
+        label: "Scale Signals",
+        items: ["60 tools in one platform", "1.2M+ files processed", "120+ countries served"],
+      },
+    ],
+    tags: ["Next.js", "SaaS", "Browser APIs", "PDF", "Image Tools", "Product"],
+    featured: true,
+  },
+  {
+    slug: "nsrgfx",
+    title: "NSRGFX — Freelance Portfolio",
+    company: "Personal Brand",
+    period: "2023 – Present",
+    url: "https://www.nsrgfx.in",
+    summary:
+      "Personal freelancing website and brand platform for full-stack MERN / React Native services, case studies, blog CMS, and client acquisition.",
+    description:
+      "NSRGFX is my personal freelancing website — a premium portfolio and lead-generation platform showcasing full-stack capabilities, project work, engagement models, and a CMS-powered blog with admin tools for content publishing.",
+    highlights: [
+      {
+        label: "Platform",
+        items: [
+          "Portfolio site with services, projects, pricing, and contact flows",
+          "Admin CMS for blog publishing with TipTap rich editor",
+          "SEO, sitemap, and structured data for organic discovery",
+          "Razorpay payment demo and discovery-call booking paths",
+        ],
+      },
+      {
+        label: "Stack",
+        items: [
+          "Next.js App Router with TypeScript",
+          "MongoDB for blog content",
+          "Cloudinary uploads and Resend transactional email",
+          "Framer Motion and Three.js for cinematic UI accents",
+        ],
+      },
+    ],
+    tags: ["Next.js", "Portfolio", "CMS", "MongoDB", "SEO", "Freelance"],
+    featured: true,
+  },
+  {
+    slug: "carbon-patent-group",
+    title: "Carbon Patent Group",
+    company: "Luminoguru Pvt Ltd",
+    period: "Feb 2026 – July 2026",
+    url: "https://carbon-patent.lusites.xyz/",
+    summary:
+      "Tier-1 Canadian patent prosecution boutique website with instant fee estimator, client login, service pages, and contact workflows.",
+    description:
+      "A professional web platform for Carbon Patent Group — a Canadian patent prosecution boutique trusted by innovative companies, research institutions, and foreign law firms worldwide.",
+    highlights: [
+      {
+        label: "Platform",
+        items: [
+          "Marketing site for Canadian patent prosecution services",
+          "Instant fee estimator for patent drafting & filing",
+          "Secure client login portal",
+          "Multi-section service pages (About, Team, Services, Foreign Agents)",
+        ],
+      },
+      {
+        label: "Features",
+        items: [
+          "Contact forms with service selection (Patent Drafting, Canadian Prosecution)",
+          "FAQ section covering PCT filings, costs, and international patents",
+          "Recognition badges and client segment showcases",
+          "Mobile-responsive layout with SEO-optimized content",
+        ],
+      },
+      {
+        label: "Domain",
+        items: [
+          "Life sciences, pharmaceuticals, chemistry, medical devices",
+          "Software, electrical, mechanical, and emerging technologies",
+          "Universities, startups, multinationals, and foreign law firm partners",
+        ],
+      },
+    ],
+    tags: ["Next.js", "MERN Stack", "PostgreSQL", "SEO", "Auth"],
+    featured: true,
+  },
+  {
+    slug: "pawcare",
+    title: "PawCare — Vet Appointments",
+    company: "Personal Product",
+    period: "Jan 2026 – Present",
+    url: "https://appointment.nsrgfx.in",
+    summary:
+      "Personal product for scheduling vet appointments with verified doctors — online video consultations, in-clinic booking, specialties, and secure pet health workflows.",
+    description:
+      "PawCare (appointment.nsrgfx.in) is a full-fledged veterinary appointment platform for pet parents. Book verified vets for 1:1 video meetings or in-clinic visits, browse specialties, start instant consults, and manage care notes in one secure product.",
+    highlights: [
+      {
+        label: "Consultations",
+        items: [
+          "1:1 online video consultations with verified veterinarians",
+          "Instant consult for same-day care",
+          "In-clinic appointment booking with confirmed time slots",
+          "Prescription guidance and care notes in the dashboard",
+        ],
+      },
+      {
+        label: "Platform",
+        items: [
+          "Specialty browsing — general practice, surgery, dermatology, exotic pets, and more",
+          "Search by specialty, pet type, symptoms, or availability",
+          "Encrypted health records and private consultation details",
+          "Clear pricing, reminders, chat with vet, and easy rescheduling",
+        ],
+      },
+      {
+        label: "Product Signals",
+        items: [
+          "Built for dogs, cats, birds, rabbits, and exotic pets",
+          "Verified identity and license checks for vets",
+          "End-to-end encryption and consent-based data handling",
+        ],
+      },
+    ],
+    tags: ["Next.js", "Video Calls", "Healthcare", "SaaS", "Auth", "Product"],
+    featured: true,
+  },
+  {
+    slug: "apkaos",
+    title: "ApkaOS",
+    company: "Personal Product",
+    period: "2025 – Present",
+    url: "https://apkaos.com",
+    summary:
+      "Cloud-based School Operating System unifying student information, attendance, fees, admissions, exams, results, and parent portal on one privacy-first platform.",
+    description:
+      "ApkaOS is a modern School Operating System for schools, colleges, and coaching institutes. It replaces disconnected tools with fifteen connected modules sharing one institutional record — so staff stop being the integration layer and start running school operations from a single secure cloud platform.",
+    highlights: [
+      {
+        label: "Core Modules",
+        items: [
+          "Student & teacher management with searchable SIS records",
+          "Daily and period-wise attendance with live absence trends",
+          "Fee structures, instalments, receipts, and automated parent reminders",
+          "Admission pipeline from enquiry to enrolment",
+          "Examinations, seating, marks workflow, and same-day report cards",
+          "Parent portal for attendance, fees, homework, results, and circulars",
+        ],
+      },
+      {
+        label: "Platform",
+        items: [
+          "Role-based access for principals, admins, teachers, accountants, and parents",
+          "Analytics dashboard for attendance, fees, academics, and admissions",
+          "Notification center across app, email, and SMS with delivery tracking",
+          "Encrypted cloud storage with document versioning",
+          "AI-ready structured data foundation",
+        ],
+      },
+      {
+        label: "Privacy & Security",
+        items: [
+          "Privacy-first architecture with tenant isolation",
+          "AES-256 encryption at rest and TLS in transit",
+          "Multi-factor authentication and session/device visibility",
+          "Audit logs and school-owned data with full export",
+          "99.9% cloud uptime target on redundant infrastructure",
+        ],
+      },
+    ],
+    tags: ["Next.js", "School OS", "Cloud", "PostgreSQL", "Auth", "SaaS"],
+    featured: true,
+  },
+  {
+    slug: "kamalpur",
+    title: "Kamalpur Patel Parivar",
+    company: "Personal / Community Project",
+    period: "2025 – Present",
+    url: "https://www.kamalpurparivar.com/",
+    summary:
+      "Community website for the Kamalpur Patel Parivar in Ahmedabad — village heritage, Ramlila cultural archive, gallery, and annual Sneh Milan event details in Gujarati.",
+    description:
+      "A cultural community platform for કમાલપુર પટેલ પરિવાર અમદાવાદ. It preserves Kamalpur village heritage and the multi-generational Ramlila tradition, with family directory, gallery, and annual Sneh Milan event information — built as a bilingual Gujarati experience for families across cities who stay rooted to Kamalpur.",
+    highlights: [
+      {
+        label: "Community Platform",
+        items: [
+          "Gujarati-first site for Kamalpur Patel families in Ahmedabad and beyond",
+          "About Kamalpur village heritage and sacred Ramlila tradition",
+          "Family directory (પરિવાર) and cultural gallery",
+          "Sneh Milan event page with date, venue, and map location",
+        ],
+      },
+      {
+        label: "Content & Experience",
+        items: [
+          "Hero media storytelling for village identity and devotion",
+          "Ramlila overview with YouTube cultural showcase",
+          "Login for community member access",
+          "Mobile-friendly navigation across Home, Family, Gallery, and Meetup",
+        ],
+      },
+      {
+        label: "Purpose",
+        items: [
+          "Keep diaspora families connected to Kamalpur roots",
+          "Celebrate three generations of Ramlila as unity and faith",
+          "Central place for annual gathering details and community contact",
+        ],
+      },
+    ],
+    tags: ["Community", "Gujarati", "Next.js", "Culture", "Events"],
+    featured: true,
+  },
+  {
+    slug: "videocrew",
+    title: "Video Crew",
+    company: "Personal Product",
+    period: "2025 – Present",
+    url: "https://videocrew.nsrgfx.in/",
+    summary:
+      "Video production crew platform for booking talent, managing shoots, and coordinating production teams — built as a personal product under the NSRGFX ecosystem.",
+    description:
+      "Video Crew is a web platform for organizing video production workflows — connecting projects with crew members, scheduling shoots, and keeping production details in one place. Built as a focused personal product for teams that need a lightweight way to run video shoots without heavy enterprise tooling.",
+    highlights: [
+      {
+        label: "Production Workflow",
+        items: [
+          "Project and shoot planning in a single dashboard",
+          "Crew roles and availability coordination",
+          "Production schedules and assignment tracking",
+          "Central hub for shoot-day details and contacts",
+        ],
+      },
+      {
+        label: "Platform",
+        items: [
+          "Responsive web app for on-set and remote access",
+          "Clean UI for fast crew onboarding and updates",
+          "Built with modern full-stack tooling on NSRGFX infrastructure",
+          "Scalable foundation for future booking and portfolio features",
+        ],
+      },
+    ],
+    tags: ["Video Production", "Next.js", "SaaS", "Product", "MERN Stack"],
+    featured: true,
+  },
+  {
     slug: "tattoo-generation-platform",
     title: "AI Tattoo Generation Platform",
     company: "Luminoguru Pvt Ltd",
-    period: "2025 – Present",
+    period: "Oct 2025 – July 2026",
     summary:
       "AI-powered tattoo design platform where users generate, preview, and save custom tattoo artwork with style controls and a personal design gallery.",
     description:
@@ -143,7 +451,7 @@ export const portfolioProjects: PortfolioProject[] = [
     slug: "school-management-system",
     title: "School Management System",
     company: "Luminoguru Pvt Ltd",
-    period: "2025 – Present",
+    period: "Feb 2026 – July 2026",
     summary:
       "End-to-end school ERP with admin, teacher, student, and parent portals — attendance, grades, timetables, fees, and dashboard analytics.",
     description:
@@ -184,7 +492,7 @@ export const portfolioProjects: PortfolioProject[] = [
     slug: "raffily-business",
     title: "Raffily Business",
     company: "Anthem Infotech Pvt. Ltd.",
-    period: "Mar 2025 – Present",
+    period: "Nov 2024 – Mar 2025",
     summary:
       "SSR raffle portal with Stripe integration, CSV prize imports, SSO via NextAuth, and mobile-first responsive UI.",
     description:
@@ -222,7 +530,7 @@ export const portfolioProjects: PortfolioProject[] = [
     slug: "carplake",
     title: "Carplake",
     company: "Anthem Infotech Pvt. Ltd.",
-    period: "Feb 2025 – Jun 2025",
+    period: "Dec 2024 – Feb 2025",
     summary:
       "Fishing lake booking platform for admins, lake owners, and anglers with real-time booking, image uploads, and revenue tracking.",
     description:
@@ -261,7 +569,7 @@ export const portfolioProjects: PortfolioProject[] = [
     slug: "raffily",
     title: "Raffily",
     company: "Anthem Infotech Pvt. Ltd.",
-    period: "Mar 2025 – Jun 2025",
+    period: "Jan 2025 – Mar 2025",
     summary:
       "Raffle system with admin, merchant, and user roles — raffle creation, instant wins, PayPal/Acquired payments, and email notifications.",
     description:
@@ -375,44 +683,10 @@ export const portfolioProjects: PortfolioProject[] = [
     featured: false,
   },
   {
-    slug: "condominium-portal",
-    title: "Condominium Portal",
-    company: "Tiny Script Soft Tech Pvt. Ltd.",
-    period: "Jan 2024 – Nov 2024",
-    summary:
-      "Real estate platform connecting property owners with customers — dashboards, listings, JWT auth, booking workflows, and Azure CI/CD.",
-    description:
-      "Web platform connecting property owners with customers seeking real estate and related services with secure booking workflows and media management.",
-    highlights: [
-      {
-        label: "Platform",
-        items: [
-          "User dashboards & property listing management",
-          "Secure JWT authentication",
-          "Service booking workflows",
-        ],
-      },
-      {
-        label: "Cloud & DevOps",
-        items: [
-          "Azure Web App & Static Web App",
-          "Azure Blob for media storage",
-          "CI/CD pipelines via Git/Bitbucket",
-        ],
-      },
-      {
-        label: "Stack",
-        items: ["MERN Stack", "Microsoft SQL Server", "REST APIs"],
-      },
-    ],
-    tags: ["MERN Stack", "Azure", "SQL Server", "JWT", "CI/CD"],
-    featured: true,
-  },
-  {
     slug: "employee-management-desktop",
     title: "Employee Management Portal (Desktop)",
     company: "Tiny Script Soft Tech Pvt. Ltd.",
-    period: "Apr 2024 – Jul 2024",
+    period: "Apr 2024 – July 2024",
     summary:
       "Cross-platform Electron desktop app integrated with the MERN stack for employee management with offline-first support.",
     description:
@@ -446,7 +720,7 @@ export const portfolioProjects: PortfolioProject[] = [
     slug: "prabhuseva-travels",
     title: "Prabhuseva Travels",
     company: "Webreate",
-    period: "Oct 2023 – Dec 2023",
+    period: "June 2023 – Dec 2023",
     summary:
       "Travel booking platform for customizable tour packages with JWT auth, dashboards, booking workflows, and Vercel deployment.",
     description:

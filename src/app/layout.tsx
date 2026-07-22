@@ -29,14 +29,12 @@ export const metadata: Metadata = {
     url: siteConfig.url,
     siteName: seoConfig.siteName,
     locale: seoConfig.locale,
-    images: [{ url: seoConfig.defaultOgImage, width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: seoConfig.defaultTitle,
     description: seoConfig.defaultDescription,
     creator: seoConfig.xHandle,
-    images: [seoConfig.defaultOgImage],
   },
 };
 
