@@ -1,23 +1,38 @@
-import { PageHero } from "@/components/sections/page-hero";
-import { AboutPrinciplesSection } from "@/components/sections/about-principles-section";
-import { createIaMetadata } from "@/config/information-architecture";
-import { ProcessSection } from "@/components/sections/process-section";
+import type { Metadata } from "next";
 
-export const metadata = createIaMetadata("about");
+import { AboutEducationSection } from "@/components/sections/about-education-section";
+import { AboutExperienceSection } from "@/components/sections/about-experience-section";
+import { AboutJourneySection } from "@/components/sections/about-journey-section";
+import { AboutProfileHero } from "@/components/sections/about-profile-hero";
+import { AboutSkillsSection } from "@/components/sections/about-skills-section";
+import { JsonLd } from "@/components/shared/json-ld";
+import { profile } from "@/config/profile";
+import { seoConfig } from "@/config/seo";
+import { getPersonSchema } from "@/lib/seo/schema";
+
+export const metadata: Metadata = {
+  title: `About ${profile.name} | ${seoConfig.siteName}`,
+  description: profile.summary,
+  alternates: { canonical: "/about" },
+  keywords: [
+    profile.name,
+    "Full Stack Developer",
+    "MERN stack developer",
+    "React Native developer",
+    "Mohali",
+    "MCA GLA University",
+  ],
+};
 
 export default function AboutPage() {
   return (
     <>
-      <PageHero
-        kicker="About Me"
-        title="Full Stack Developer with a production-first mindset."
-        subtitle="MERN stack, React Native, Next.js, and cloud integrations — built to ship fast without cutting corners."
-        stats={["4+ years experience", "Team lead roles", "Production delivery"]}
-        primaryCta={{ label: "Contact Me", href: "/contact", variant: "primary" }}
-        secondaryCta={{ label: "View Services", href: "/services", variant: "secondary" }}
-      />
-      <AboutPrinciplesSection />
-      <ProcessSection />
+      <JsonLd data={getPersonSchema()} />
+      <AboutProfileHero />
+      <AboutExperienceSection />
+      <AboutEducationSection />
+      <AboutJourneySection />
+      <AboutSkillsSection />
     </>
   );
 }

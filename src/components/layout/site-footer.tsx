@@ -16,10 +16,16 @@ const footerLinks = {
     { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
     { label: "Projects", href: "/projects" },
+    { label: "Personal Products", href: "/projects?category=personal" },
   ],
   help: [
     { label: "FAQ", href: "/faq" },
     { label: "Contact", href: "/contact" },
+    {
+      label: "Resume",
+      href: "https://drive.google.com/file/d/1--6RFnZO_3DPRppXEh4V_MUyKVA_qNcH/view?usp=sharing",
+      external: true,
+    },
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms", href: "/terms" },
   ],
@@ -81,12 +87,23 @@ export function SiteFooter() {
           <ul className="space-y-2">
             {footerLinks.help.map((link) => (
               <li key={link.href}>
-                <Link
-                  className="text-sm text-[var(--fg-muted)] transition hover:text-[var(--primary)]"
-                  href={link.href}
-                >
-                  {link.label}
-                </Link>
+                {"external" in link && link.external ? (
+                  <a
+                    className="text-sm text-[var(--fg-muted)] transition hover:text-[var(--primary)]"
+                    href={link.href}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    className="text-sm text-[var(--fg-muted)] transition hover:text-[var(--primary)]"
+                    href={link.href}
+                  >
+                    {link.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>

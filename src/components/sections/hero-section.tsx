@@ -48,12 +48,18 @@ export function HeroSection() {
                 {hero.primaryCta} <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
-            <Link href="/projects">
+            <Link href="/projects?category=personal">
               <Button size="lg" variant="secondary">
                 {hero.secondaryCta}
               </Button>
             </Link>
           </div>
+          <p className="mt-4 text-xs text-white/40">
+            Prefer a ready-made product?{" "}
+            <Link className="text-[var(--primary)] hover:underline" href="/projects?category=personal">
+              See personal products
+            </Link>
+          </p>
 
           <div className="mt-12 grid grid-cols-3 gap-6 border-t border-[var(--primary)]/20 pt-8">
             {hero.stats.map((stat) => (

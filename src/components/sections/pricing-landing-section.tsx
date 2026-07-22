@@ -104,6 +104,12 @@ export function PricingLandingSection() {
           );
         })}
       </div>
+      <p className="mt-10 text-center text-sm text-white/45">
+        Looking for a ready-made product instead of a custom build?{" "}
+        <Link className="text-[var(--primary)] hover:underline" href="/projects?category=personal">
+          Browse personal products
+        </Link>
+      </p>
     </HomeSection>
   );
 }

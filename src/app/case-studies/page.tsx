@@ -24,7 +24,7 @@ export default function CaseStudiesPage() {
         subtitle="Full-stack delivery at Luminoguru, React Native leadership at Webguruz, and Next.js + cloud systems at Anthem Infotech."
         stats={["Enterprise platforms", "Mobile apps", "Payment systems"]}
         primaryCta={{ label: "Contact Me", href: "/contact", variant: "primary" }}
-        secondaryCta={{ label: "Explore Projects", href: "/projects", variant: "secondary" }}
+        secondaryCta={{ label: "Personal Products", href: "/projects?category=personal", variant: "secondary" }}
       />
       <CaseStudiesListSection />
     </>

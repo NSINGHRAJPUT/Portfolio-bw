@@ -13,26 +13,26 @@ const staticRoutes: Array<{
   changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
 }> = [
   { path: "/", priority: 1, changeFrequency: "weekly" },
-  { path: "/about", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/about", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/projects", priority: 0.95, changeFrequency: "weekly" },
   { path: "/services", priority: 0.85, changeFrequency: "weekly" },
-  { path: "/projects", priority: 0.9, changeFrequency: "weekly" },
   { path: "/case-studies", priority: 0.8, changeFrequency: "weekly" },
-  { path: "/ai-solutions", priority: 0.75, changeFrequency: "monthly" },
   { path: "/blog", priority: 0.85, changeFrequency: "daily" },
-  { path: "/resources", priority: 0.6, changeFrequency: "monthly" },
-  { path: "/resources/animation-plan", priority: 0.5, changeFrequency: "monthly" },
-  { path: "/resources/ui-components", priority: 0.5, changeFrequency: "monthly" },
-  { path: "/testimonials", priority: 0.7, changeFrequency: "monthly" },
   { path: "/pricing", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/contact", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/contact", priority: 0.85, changeFrequency: "monthly" },
   { path: "/book-meeting", priority: 0.75, changeFrequency: "monthly" },
+  { path: "/estimate-project", priority: 0.75, changeFrequency: "monthly" },
+  { path: "/ai-solutions", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/ai-assistant", priority: 0.55, changeFrequency: "monthly" },
+  { path: "/testimonials", priority: 0.7, changeFrequency: "monthly" },
   { path: "/faq", priority: 0.65, changeFrequency: "monthly" },
-  { path: "/privacy", priority: 0.3, changeFrequency: "yearly" },
-  { path: "/privacy-policy", priority: 0.3, changeFrequency: "yearly" },
-  { path: "/terms", priority: 0.3, changeFrequency: "yearly" },
-  { path: "/terms-and-conditions", priority: 0.3, changeFrequency: "yearly" },
-  { path: "/estimate-project", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/ai-assistant", priority: 0.6, changeFrequency: "monthly" },
+  { path: "/resources", priority: 0.55, changeFrequency: "monthly" },
+  { path: "/resources/animation-plan", priority: 0.4, changeFrequency: "monthly" },
+  { path: "/resources/ui-components", priority: 0.4, changeFrequency: "monthly" },
+  { path: "/privacy", priority: 0.25, changeFrequency: "yearly" },
+  { path: "/privacy-policy", priority: 0.25, changeFrequency: "yearly" },
+  { path: "/terms", priority: 0.25, changeFrequency: "yearly" },
+  { path: "/terms-and-conditions", priority: 0.25, changeFrequency: "yearly" },
 ];
 
 function buildEntry(
@@ -66,7 +66,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     buildEntry(`/projects/${project.slug}`, {
       lastModified: now,
       changeFrequency: "monthly",
-      priority: 0.8,
+      // Personal products rank higher for buyers discovering ready-made software
+      priority: project.category === "personal" ? 0.9 : 0.75,
     }),
   );
 

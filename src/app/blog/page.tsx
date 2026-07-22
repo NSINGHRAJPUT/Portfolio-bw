@@ -30,7 +30,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
         subtitle="Practical insights on MERN stack development, React Native, Next.js, and full-stack engineering."
         stats={["Web development", "Mobile apps", "Cloud & DevOps"]}
         primaryCta={{ label: "Explore Resources", href: "/resources", variant: "primary" }}
-        secondaryCta={{ label: "View Projects", href: "/projects", variant: "secondary" }}
+        secondaryCta={{ label: "Personal Products", href: "/projects?category=personal", variant: "secondary" }}
       />
       <BlogListSection activeTag={tag} posts={posts} />
       <section className="container-safe pb-20">

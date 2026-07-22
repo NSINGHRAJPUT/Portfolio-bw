@@ -66,7 +66,7 @@ export const testimonials = [
 
 export const numbers = [
   { value: "4+", label: "Years of development experience" },
-  { value: "20+", label: "Production projects shipped" },
+  { value: "21+", label: "Production projects shipped" },
   { value: "5+", label: "Payment gateways integrated" },
   { value: "4", label: "Companies as developer & team lead" },
 ];

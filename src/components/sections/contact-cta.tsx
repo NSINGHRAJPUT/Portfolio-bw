@@ -17,6 +17,12 @@ export function ContactCta() {
           <Link href="/contact">
             <Button size="lg">{cta.button}</Button>
           </Link>
+          <p className="text-sm text-white/45">
+            Looking for a ready product?{" "}
+            <Link className="text-[var(--primary)] hover:underline" href="/projects?category=personal">
+              Browse personal products
+            </Link>
+          </p>
         </div>
       </CyberCard>
     </HomeSection>
