@@ -11,7 +11,7 @@ import { SiteHeader } from "@/components/layout/site-header";
 import { AppProviders } from "@/components/providers/app-providers";
 import { siteConfig } from "@/lib/config/site";
 import { getOrganizationSchema, getWebsiteSchema } from "@/lib/seo/schema";
-
+import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -46,9 +46,13 @@ export default function RootLayout({
   return (
     <html className="dark" lang="en" suppressHydrationWarning>
       <head>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4634994555998964"
-     crossorigin="anonymous"></script>
-      </head>
+  <Script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4634994555998964"
+    crossOrigin="anonymous"
+    strategy="afterInteractive"
+  />
+</head>
       <body className={inter.className}>
         <AppProviders>
           <SiteBackground />
