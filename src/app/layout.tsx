@@ -45,6 +45,10 @@ export default function RootLayout({
 }>) {
   return (
     <html className="dark" lang="en" suppressHydrationWarning>
+      <head>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4634994555998964"
+     crossorigin="anonymous"></script>
+      </head>
       <body className={inter.className}>
         <AppProviders>
           <SiteBackground />
