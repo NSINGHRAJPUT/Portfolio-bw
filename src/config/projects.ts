@@ -141,25 +141,16 @@ export const portfolioProjects: PortfolioProject[] = [
     featured: true,
   },
   {
-    slug: "useit",
-    title: "UseIt — ToolKit Pro",
+    slug: "toolpin",
+    title: "Toolpin — ToolKit Pro",
     company: "Personal Product",
     period: "2025 – Present",
-    url: "https://useit.nsrgfx.in",
+    url: "https://toolpin.online",
     summary:
       "First personal SaaS product — 60 browser-local conversion tools for images, PDFs, documents, and text/data with premium UX and no watermarks.",
     description:
-      "UseIt (ToolKit Pro) is my first product: a golden-dark conversion workspace for images, PDFs, Word documents, and data utilities. Most tools run entirely in the browser for privacy and speed — convert, compress, resize, merge, format, hash, and more without accounts or watermarks.",
+      "Toolpin is my first product: a golden-dark conversion workspace for images, PDFs, Word documents, and data utilities. Most tools run entirely in the browser for privacy and speed — convert, compress, resize, merge, format, hash, and more without accounts or watermarks.",
     highlights: [
-      {
-        label: "Tool Suites",
-        items: [
-          "25 image tools — convert, compress, resize, crop, rotate, strip metadata",
-          "10 PDF tools — merge, split, compress, rotate, extract, PDF ↔ images",
-          "10 document tools — DOCX/PPTX/XLSX/CSV conversions and Markdown pipelines",
-          "15 text & data tools — JSON, Base64, URL encode, MD5/SHA-256, QR, counters",
-        ],
-      },
       {
         label: "Product",
         items: [
