@@ -330,40 +330,40 @@ export const portfolioProjects: PortfolioProject[] = [
     category: "personal",
     featured: true,
   },
-  {
-    slug: "videocrew",
-    title: "Video Crew",
-    company: "Personal Product",
-    period: "2025 – Present",
-    url: "https://videocrew.nsrgfx.in/",
-    summary:
-      "Video production crew platform for booking talent, managing shoots, and coordinating production teams — built as a personal product under the NSRGFX ecosystem.",
-    description:
-      "Video Crew is a web platform for organizing video production workflows — connecting projects with crew members, scheduling shoots, and keeping production details in one place. Built as a focused personal product for teams that need a lightweight way to run video shoots without heavy enterprise tooling.",
-    highlights: [
-      {
-        label: "Production Workflow",
-        items: [
-          "Project and shoot planning in a single dashboard",
-          "Crew roles and availability coordination",
-          "Production schedules and assignment tracking",
-          "Central hub for shoot-day details and contacts",
-        ],
-      },
-      {
-        label: "Platform",
-        items: [
-          "Responsive web app for on-set and remote access",
-          "Clean UI for fast crew onboarding and updates",
-          "Built with modern full-stack tooling on NSRGFX infrastructure",
-          "Scalable foundation for future booking and portfolio features",
-        ],
-      },
-    ],
-    tags: ["Video Production", "Next.js", "SaaS", "Product", "MERN Stack"],
-    category: "personal",
-    featured: true,
-  },
+  // {
+  //   slug: "videocrew",
+  //   title: "Video Crew",
+  //   company: "Personal Product",
+  //   period: "2025 – Present",
+  //   url: "https://videocrew.nsrgfx.in/",
+  //   summary:
+  //     "Video production crew platform for booking talent, managing shoots, and coordinating production teams — built as a personal product under the NSRGFX ecosystem.",
+  //   description:
+  //     "Video Crew is a web platform for organizing video production workflows — connecting projects with crew members, scheduling shoots, and keeping production details in one place. Built as a focused personal product for teams that need a lightweight way to run video shoots without heavy enterprise tooling.",
+  //   highlights: [
+  //     {
+  //       label: "Production Workflow",
+  //       items: [
+  //         "Project and shoot planning in a single dashboard",
+  //         "Crew roles and availability coordination",
+  //         "Production schedules and assignment tracking",
+  //         "Central hub for shoot-day details and contacts",
+  //       ],
+  //     },
+  //     {
+  //       label: "Platform",
+  //       items: [
+  //         "Responsive web app for on-set and remote access",
+  //         "Clean UI for fast crew onboarding and updates",
+  //         "Built with modern full-stack tooling on NSRGFX infrastructure",
+  //         "Scalable foundation for future booking and portfolio features",
+  //       ],
+  //     },
+  //   ],
+  //   tags: ["Video Production", "Next.js", "SaaS", "Product", "MERN Stack"],
+  //   category: "personal",
+  //   featured: true,
+  // },
   {
     slug: "tattoo-generation-platform",
     title: "AI Tattoo Generation Platform",
